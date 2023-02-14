@@ -6,11 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="ScentDex" />
+        <module name="week-4-hibernate-exercise" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="scent-dex" target="1.5" />
+      <module name="ScentDex" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>
