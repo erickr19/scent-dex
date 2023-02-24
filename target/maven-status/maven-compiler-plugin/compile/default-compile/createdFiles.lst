@@ -1,0 +1,3 @@
+com/scentdex/entity/Fragrance.class
+com/scentdex/persistence/FragranceDao.class
+com/scentdex/persistence/SessionFactoryProvider.class
