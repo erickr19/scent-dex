@@ -93,7 +93,7 @@
   </dependencies>
 
   <build>
-    <finalName>Scent-Dex</finalName>
+    <finalName>scent-dex</finalName>
     <pluginManagement>
       <plugins>
         <plugin>

@@ -20,6 +20,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap" rel="stylesheet">
     <%-- css file --%>
-    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <link href="./css/main.css" rel="stylesheet" type="text/css">
 </head>
 
