@@ -1,7 +1,7 @@
 <%-- nav bar --%>
 <nav class="navbar navbar-light">
     <div class="container justify-content-between flex-nowrap">
-        <a class="navbar-brand text-white fs-2" href="/scent_dex_war_exploded">Scent Dex</a>
+        <a class="navbar-brand text-white fs-2" href="${pageContext.request.contextPath}/homepage">Scent Dex</a>
         <div class="flex-fill px-5">
             <input type="text" class="form-control" placeholder="Search...">
         </div>
@@ -11,7 +11,7 @@
                     <a class="nav-link text-white" href="#">explore</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#">learn</a>
+                    <a class="nav-link text-white" href="${pageContext.request.contextPath}/learn">learn</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-white" href="#">login</a>

@@ -10,12 +10,12 @@ import java.io.IOException;
 
 /**
  * Homepage servlet class.
- * Forwards to the homepage
+ * Forwards to the learn page
  * @author ereyes3
  */
 @WebServlet(
-        name = "homepage",
-        urlPatterns = { "/homepage" }
+        name = "learn",
+        urlPatterns = { "/learn" }
 )
 public class Learn extends HttpServlet {
     /**
@@ -28,7 +28,7 @@ public class Learn extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException {
         // set url
-        String url = "/index.jsp";
+        String url = "/learn.jsp";
         // get dispatcher
         RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher(url);
         // forward
