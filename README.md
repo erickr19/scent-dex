@@ -1,8 +1,17 @@
-# Scent Dex
-## Project purpose
-### What
-Scent Dex will be a web application where a user can browse through different fragrances and check out the scent profile of each. Additionally, it will allow the user to leave a rating and review on the fragrance.
-### Why
-I feel like other fragrance websites are a little dated with how they look and operate. The aim of this project is to look more modern.
-### How
-Gradual work until May 2023. Adding, committing, and pushing often on GitHub.
+# Erick Reyes - Individual Project - Scent Dex
+## Problem Statement
+Fragrances as a hobby can be characterized as an exploration. There are many scent notes, characteristics, and descriptions to go through.<br/>
+Many existing fragrance websites do help users find a scent, but it's cluttered with advertisements and other shopfront features. It also doesn't help that most of them look dated in terms of appearance and operations.<br>
+Scent Dex aims to guide users towards their next fragrance by providing a minimalist interface free from distractions; enabling the user to add, lookup, update, and delete fragrances. Additionally, users can leave reviews, add a rating, and add scents to a personal wishlist to keep track of their interests.<br>
+By making steady progress until the end of the semester, my hope is to provide a fresh experience for people looking to get into the world of fragrances.
+
+## Technologies/Techniques
+Database: MySQL 8.0.31-arm64<br>
+ORM Framework: Hibernate 5<br>
+Dependency management: Maven<br>
+CSS: Bootstrap<br>
+Logging: Log4J2<br>
+Unit Testing: JUnit for at least 80%+ code coverage<br>
+IDE: IntelliJ IDEA
+
+## Design
