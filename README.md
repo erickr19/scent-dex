@@ -15,3 +15,8 @@ Unit Testing: JUnit for at least 80%+ code coverage<br>
 IDE: IntelliJ IDEA
 
 ## Design
+### Screen Designs
+https://github.com/erickr19/scent-dex/blob/main/design-files/screen-designs.md
+### User Stories
+https://github.com/erickr19/scent-dex/blob/main/design-files/user-stories.md
+### Database ERD

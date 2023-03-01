@@ -1,0 +1,1 @@
+![alt-text](images/scent-dex-erd.png)
