@@ -20,14 +20,17 @@ public class Note {
 
     /**
      * Constructor to create a new Note
-     * @param id The id of the note
-     * @param name The name of the note
-     * @param typeId The type of the note
+     *
+     * @param id          The id of the note
+     * @param name        The name of the note
+     * @param type      The type of the note
+     * @param fragrance The fragrance the note is associated with
      */
-    public Note(int id, String name, Type typeId) {
+    public Note(int id, String name, Type type, Fragrance fragrance) {
         this.id = id;
         this.name = name;
-        this.typeId = typeId;
+        this.type = type;
+        this.fragrance = fragrance;
     }
 
     // instance variables
@@ -44,7 +47,11 @@ public class Note {
     // foreign key
     @ManyToOne
     @JoinColumn(name = "type_id")
-    private Type typeId;
+    private Type type;
+
+    @ManyToOne
+    @JoinColumn(name = "fragrance_id")
+    private Fragrance fragrance;
 
     // setters and getters
 
@@ -84,17 +91,35 @@ public class Note {
      * Gets the id of the type
      * @return the type id
      */
-    public Type getTypeId() {
-        return typeId;
+    public Type getType() {
+        return type;
     }
 
     /**
      * Sets the type id
      * @param typeId the tpye of the id to set
      */
-    public void setTypeId(Type typeId) {
-        this.typeId = typeId;
+    public void setType(Type type) {
+        this.type = type;
     }
+
+    /**
+     * Gets the fragrance associated with the note
+     * @return fragrance
+     */
+    public Fragrance getFragrance() {
+        return fragrance;
+    }
+
+    /**
+     * Sets the fragranceId associated with the note
+     * @param fragrance fragrance
+     */
+    public void setFragrance(Fragrance fragrance) {
+        this.fragrance = fragrance;
+    }
+
+
 
     // TODO: Make a toString() method using string builder
 }
