@@ -48,14 +48,11 @@ DROP TABLE IF EXISTS `fragrances`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `fragrances` (
   `fragranceId` int NOT NULL,
-  `notes` int NOT NULL,
   `name` varchar(100) DEFAULT NULL,
   `designer` varchar(100) DEFAULT NULL,
   `description` varchar(200) DEFAULT NULL,
   `pricing` varchar(12) DEFAULT NULL,
-  PRIMARY KEY (`fragranceId`),
-  KEY `notes` (`notes`),
-  CONSTRAINT `fragrances_ibfk_1` FOREIGN KEY (`notes`) REFERENCES `notes` (`noteId`) ON DELETE RESTRICT ON UPDATE CASCADE
+  PRIMARY KEY (`fragranceId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -200,4 +197,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-03-03  9:46:18
+-- Dump completed on 2023-03-03  9:57:57
