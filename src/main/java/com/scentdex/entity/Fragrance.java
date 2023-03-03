@@ -27,18 +27,17 @@ public class Fragrance {
      * @param wishlists The wishlists
      * @param name The name
      * @param designer The designer
-     * @param scentNotes The notes
+     * @param notes The notes
      * @param description The description
      * @param pricing The pricing
      */
-    public Fragrance(int id, Set<Review> reviews, Set<Wishlist> wishlists, Set<Note> notes, String name, String designer, String scentNotes, String description, String pricing) {
+    public Fragrance(int id, Set<Review> reviews, Set<Wishlist> wishlists, Set<Note> notes, String name, String designer, String description, String pricing) {
         this.id = id;
         this.reviews = reviews;
         this.wishlists = wishlists;
         this.notes = notes;
         this.name = name;
         this.designer = designer;
-        this.scentNotes = scentNotes;
         this.description = description;
         this.pricing = pricing;
     }
@@ -68,10 +67,6 @@ public class Fragrance {
     // designer
     @Column(name = "designer")
     private String designer;
-
-    // scent notes
-    @Column(name = "scent_notes")
-    private String scentNotes;
 
     // description
     @Column(name = "description")
@@ -129,22 +124,6 @@ public class Fragrance {
      */
     public void setDesigner(String designer) {
         this.designer = designer;
-    }
-
-    /**
-     * Returns fragrance notes
-     * @return The notes of the fragrance
-     */
-    public String getScentNotes() {
-        return scentNotes;
-    }
-
-    /**
-     * Sets the fragrance notes
-     * @param scentNotes The notes of the fragrance
-     */
-    public void setScentNotes(String scentNotes) {
-        this.scentNotes = scentNotes;
     }
 
     /**
@@ -236,7 +215,7 @@ public class Fragrance {
         return "Fragrance{" +
                 "name='" + name + '\'' +
                 ", designer='" + designer + '\'' +
-                ", scent notes='" + scentNotes + '\'' +
+                ", scent notes='" + notes + '\'' +
                 ", description='" + description + '\'' +
                 ", pricing='" + pricing + '\'' +
                 '}';
