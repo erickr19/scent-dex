@@ -31,10 +31,11 @@ public class Fragrance {
      * @param description The description
      * @param pricing The pricing
      */
-    public Fragrance(int id, Set<Review> reviews, Set<Wishlist> wishlists, String name, String designer, String scentNotes, String description, String pricing) {
+    public Fragrance(int id, Set<Review> reviews, Set<Wishlist> wishlists, Set<Note> notes, String name, String designer, String scentNotes, String description, String pricing) {
         this.id = id;
         this.reviews = reviews;
         this.wishlists = wishlists;
+        this.notes = notes;
         this.name = name;
         this.designer = designer;
         this.scentNotes = scentNotes;
@@ -56,6 +57,9 @@ public class Fragrance {
 
     @OneToMany(mappedBy = "wishlist")
     private Set<Wishlist> wishlists = new HashSet<>();
+
+    @OneToMany(mappedBy = "note")
+    private Set<Note> notes = new HashSet<>();
 
     // name
     @Column(name = "name")
@@ -205,6 +209,22 @@ public class Fragrance {
      */
     public void setWishlists(Set<Wishlist> wishlists) {
         this.wishlists = wishlists;
+    }
+
+    /**
+     * Gets the notes of the fragrance
+     * @return notes
+     */
+    public Set<Note> getNotes() {
+        return notes;
+    }
+
+    /**
+     * Sets the notes of the fragrance
+     * @param notes notes of the fragrance
+     */
+    public void setNotes(Set<Note> notes) {
+        this.notes = notes;
     }
 
     /**
