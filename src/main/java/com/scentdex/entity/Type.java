@@ -12,6 +12,21 @@ import javax.persistence.*;
 @Entity(name = "Type")
 @Table(name = "types")
 public class Type {
+    /**
+     * Empty constructor
+     */
+    public Type() {}
+
+    /**
+     * Constructor that creates a new Type
+     * @param id The id of the type
+     * @param name The type name
+     */
+    public Type(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
     // instance variables
 
     //id
