@@ -38,11 +38,11 @@ public class Wishlist {
     private int id;
 
     @OneToOne
-    @JoinColumn(name = "user_id")
+    @JoinColumn(name = "user")
     private User user;
 
     @ManyToOne
-    @JoinColumn(name = "fragrance_id")
+    @JoinColumn(name = "fragrance")
     private Fragrance fragrance;
 
     /**
