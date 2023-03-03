@@ -12,10 +12,18 @@ import javax.persistence.*;
 @Table(name = "users")
 public class User {
     // constructors
-    // empty constructor
+
+    /**
+     * Empty constructor
+     */
     public User() {}
 
-    // construtor to create a new user
+    /**
+     * Constructor to create a new User
+     * @param id The id of th user
+     * @param email The email of the user
+     * @param password The password of the user
+     */
     public User(int id, String email, String password) {
         this.id = id;
         this.email = email;
