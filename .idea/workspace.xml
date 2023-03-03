@@ -10,9 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="637f9b54-8ac0-4522-8cd3-532ac466107c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/scentdex/persistence/GenericDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scentdex/entity/Note.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scentdex/entity/Note.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scentdex/entity/Type.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scentdex/entity/Type.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,7 +220,7 @@
       <workItem from="1677106173954" duration="11101000" />
       <workItem from="1677281430920" duration="5865000" />
       <workItem from="1677288349253" duration="7609000" />
-      <workItem from="1677542581774" duration="25524000" />
+      <workItem from="1677542581774" duration="26900000" />
     </task>
     <servers />
   </component>

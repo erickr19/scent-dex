@@ -15,7 +15,13 @@
         <property name="hibernate.c3p0.timeout">300</property>
         <property name="hibernate.c3p0.max_statements">50</property>
         <property name="hibernate.c3p0.idle_test_period">3000</property>
+        <!-- entity mappings-->
         <mapping class="com.scentdex.entity.Fragrance" />
+        <mapping class="com.scentdex.entity.Note"/>
+        <mapping class="com.scentdex.entity.Review"/>
+        <mapping class="com.scentdex.entity.Type"/>
+        <mapping class="com.scentdex.entity.User"/>
+        <mapping class="com.scentdex.entity.Wishlist"/>
     </session-factory>
 
 </hibernate-configuration>
