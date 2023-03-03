@@ -11,4 +11,9 @@
       </configuration>
     </facet>
   </component>
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/.idea/dataSources/8d8114b4-21d2-4d4e-93aa-fbddcc4b6f0e" />
+    </content>
+  </component>
 </module>
