@@ -13,6 +13,23 @@ import javax.persistence.*;
 @Entity(name = "Note")
 @Table(name = "notes")
 public class Note {
+    /**
+     * Empty constructor
+     */
+    public Note() {}
+
+    /**
+     * Constructor to create a new Note
+     * @param id The id of the note
+     * @param name The name of the note
+     * @param typeId The type of the note
+     */
+    public Note(int id, String name, Type typeId) {
+        this.id = id;
+        this.name = name;
+        this.typeId = typeId;
+    }
+
     // instance variables
     //id
     @Id
