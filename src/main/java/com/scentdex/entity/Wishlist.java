@@ -44,4 +44,52 @@ public class Wishlist {
     @ManyToOne
     @JoinColumn(name = "fragrance_id")
     private Fragrance fragrance;
+
+    /**
+     * Gets id of the wishlist
+     * @return the wishlist id
+     */
+    public int getId() {
+        return id;
+    }
+
+    /**
+     * Sets the wishlist id
+     * @param id the id to set
+     */
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    /**
+     * Gets the user of the wishlist
+     * @return the wishlist
+     */
+    public User getUser() {
+        return user;
+    }
+
+    /**
+     * Sets the user of the wishlist
+     * @param user The user
+     */
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    /**
+     * Gets the fragrance from the wishlist
+     * @return the fragrance
+     */
+    public Fragrance getFragrance() {
+        return fragrance;
+    }
+
+    /**
+     * Sets the fragrance in the wishlist
+     * @param fragrance The fragrance
+     */
+    public void setFragrance(Fragrance fragrance) {
+        this.fragrance = fragrance;
+    }
 }
