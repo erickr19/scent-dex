@@ -16,6 +16,30 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `fragrance_notes`
+--
+
+DROP TABLE IF EXISTS `fragrance_notes`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `fragrance_notes` (
+  `fragrance` int NOT NULL,
+  `note` int NOT NULL,
+  PRIMARY KEY (`fragrance`,`note`),
+  KEY `note` (`note`),
+  CONSTRAINT `fragrance_notes_ibfk_1` FOREIGN KEY (`fragrance`) REFERENCES `fragrances` (`fragranceId`),
+  CONSTRAINT `fragrance_notes_ibfk_2` FOREIGN KEY (`note`) REFERENCES `notes` (`noteId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `fragrance_notes`
+--
+
+LOCK TABLES `fragrance_notes` WRITE;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `fragrances`
 --
 
@@ -176,4 +200,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-03-02  9:28:12
+-- Dump completed on 2023-03-03  9:46:18

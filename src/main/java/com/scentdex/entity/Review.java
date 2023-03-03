@@ -40,14 +40,14 @@ public class Review {
     @GenericGenerator(name = "native", strategy = "native")
     private int id;
 
-    // userId
+    // user
     @ManyToOne
-    @JoinColumn(name = "user_id")
+    @JoinColumn(name = "user")
     private User user;
 
-    // fragranceId
+    // fragrance
     @ManyToOne
-    @JoinColumn(name = "fragrance_id")
+    @JoinColumn(name = "fragrance")
     private Fragrance fragrance;
 
     // review

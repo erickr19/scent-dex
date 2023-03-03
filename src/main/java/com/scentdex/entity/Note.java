@@ -3,6 +3,8 @@ package com.scentdex.entity;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Notes entity
@@ -24,13 +26,13 @@ public class Note {
      * @param id          The id of the note
      * @param name        The name of the note
      * @param type      The type of the note
-     * @param fragrance The fragrance the note is associated with
+     * @param fragrances The fragrances the note is associated with
      */
-    public Note(int id, String name, Type type, Fragrance fragrance) {
+    public Note(int id, String name, Type type, Set<Fragrance> fragrances) {
         this.id = id;
         this.name = name;
         this.type = type;
-        this.fragrance = fragrance;
+        this.fragrances = fragrances;
     }
 
     // instance variables
@@ -46,12 +48,12 @@ public class Note {
 
     // foreign key
     @ManyToOne
-    @JoinColumn(name = "type_id")
+    @JoinColumn(name = "type")
     private Type type;
 
-    @ManyToOne
-    @JoinColumn(name = "fragrance_id")
-    private Fragrance fragrance;
+    // many to many
+    @ManyToMany(mappedBy = "notes")
+    private Set<Fragrance> fragrances = new HashSet<>();
 
     // setters and getters
 
@@ -97,29 +99,27 @@ public class Note {
 
     /**
      * Sets the type id
-     * @param typeId the tpye of the id to set
+     * @param type the type of the id to set
      */
     public void setType(Type type) {
         this.type = type;
     }
 
     /**
-     * Gets the fragrance associated with the note
-     * @return fragrance
+     * Gets the fragrances associated with the note
+     * @return fragrances
      */
-    public Fragrance getFragrance() {
-        return fragrance;
+    public Set<Fragrance> getFragrances() {
+        return fragrances;
     }
 
     /**
-     * Sets the fragranceId associated with the note
-     * @param fragrance fragrance
+     * Sets the fragrances associated with the note
+     * @param fragrances the fragrances to set
      */
-    public void setFragrance(Fragrance fragrance) {
-        this.fragrance = fragrance;
+    public void setFragrances(Set<Fragrance> fragrances) {
+        this.fragrances = fragrances;
     }
-
-
 
     // TODO: Make a toString() method using string builder
 }

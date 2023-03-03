@@ -57,7 +57,12 @@ public class Fragrance {
     @OneToMany(mappedBy = "wishlist")
     private Set<Wishlist> wishlists = new HashSet<>();
 
-    @OneToMany(mappedBy = "note")
+    @ManyToMany
+    @JoinTable(
+            name = "fragrance_notes",
+            joinColumns = { @JoinColumn(name="fragrance") },
+            inverseJoinColumns = { @JoinColumn(name="note") }
+    )
     private Set<Note> notes = new HashSet<>();
 
     // name
