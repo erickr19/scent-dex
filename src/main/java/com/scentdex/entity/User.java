@@ -1,6 +1,8 @@
 package com.scentdex.entity;
 import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Users entity
@@ -36,6 +38,14 @@ public class User {
     @GeneratedValue(strategy = GenerationType.AUTO, generator="native")
     @GenericGenerator(name = "native", strategy = "native")
     private int id;
+
+    // reviewId
+    @OneToMany(mappedBy = "review")
+    private Set<Review> reviews = new HashSet<>();
+
+    // wishlistId
+    @OneToMany(mappedBy = "wishlist")
+    private Set<Wishlist> wishlist = new HashSet<>();
 
     // email
     @Column(name = "email")
@@ -93,6 +103,38 @@ public class User {
      */
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    /**
+     * Gets reviews of the user
+     * @return reviews
+     */
+    public Set<Review> getReviews() {
+        return reviews;
+    }
+
+    /**
+     * Sets reviews of the user
+     * @param reviews the reviews to set
+     */
+    public void setReviews(Set<Review> reviews) {
+        this.reviews = reviews;
+    }
+
+    /**
+     * Get wishlist of the user
+     * @return wishlist
+     */
+    public Set<Wishlist> getWishlist() {
+        return wishlist;
+    }
+
+    /**
+     * Set wishlist of the user
+     * @param wishlists wishlist
+     */
+    public void setWishlist(Set<Wishlist> wishlists) {
+        this.wishlist = wishlists;
     }
 
     // TODO: Create a toStiring() method with string builder
