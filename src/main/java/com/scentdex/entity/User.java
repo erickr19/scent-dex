@@ -20,7 +20,7 @@ public class User {
 
     /**
      * Constructor to create a new User
-     * @param id The id of th user
+     * @param id The id of the user
      * @param email The email of the user
      * @param password The password of the user
      */
