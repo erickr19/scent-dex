@@ -2,6 +2,8 @@ package com.scentdex.entity;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Fragrance entity
@@ -19,16 +21,20 @@ public class Fragrance {
     public Fragrance() {}
 
     /**
-     * Instantiating Fragrance constructor
-     * @param id The id of the fragrance
-     * @param name The name of the fragrance
-     * @param designer The designer of the fragrance
-     * @param scentNotes The notes of the fragrance
-     * @param description The description of the fragrance
-     * @param pricing The pricing of the fragrance
+     * Constructor that creates a new Fragrance
+     * @param id The id
+     * @param reviews The reviews
+     * @param wishlists The wishlists
+     * @param name The name
+     * @param designer The designer
+     * @param scentNotes The notes
+     * @param description The description
+     * @param pricing The pricing
      */
-    public Fragrance(int id, String name, String designer, String scentNotes, String description, String pricing) {
+    public Fragrance(int id, Set<Review> reviews, Set<Wishlist> wishlists, String name, String designer, String scentNotes, String description, String pricing) {
         this.id = id;
+        this.reviews = reviews;
+        this.wishlists = wishlists;
         this.name = name;
         this.designer = designer;
         this.scentNotes = scentNotes;
@@ -43,6 +49,13 @@ public class Fragrance {
     @GeneratedValue(strategy = GenerationType.AUTO, generator="native")
     @GenericGenerator(name = "native", strategy = "native")
     private int id;
+
+    // reviews
+    @OneToMany(mappedBy = "reviews")
+    private Set<Review> reviews = new HashSet<>();
+
+    @OneToMany(mappedBy = "wishlist")
+    private Set<Wishlist> wishlists = new HashSet<>();
 
     // name
     @Column(name = "name")
@@ -160,6 +173,38 @@ public class Fragrance {
      */
     public void setPricing(String pricing) {
         this.pricing = pricing;
+    }
+
+    /**
+     * Gets reviews with specified fragrance
+     * @return reviews with specified fragrance
+     */
+    public Set<Review> getReviews() {
+        return reviews;
+    }
+
+    /**
+     * Sets the reviews with specified fragrance
+     * @param reviews
+     */
+    public void setReviews(Set<Review> reviews) {
+        this.reviews = reviews;
+    }
+
+    /**
+     * Gets wishlists with specified fragrance
+     * @return
+     */
+    public Set<Wishlist> getWishlists() {
+        return wishlists;
+    }
+
+    /**
+     * Sets wishlists with specified fragrance
+     * @param wishlists
+     */
+    public void setWishlists(Set<Wishlist> wishlists) {
+        this.wishlists = wishlists;
     }
 
     /**
