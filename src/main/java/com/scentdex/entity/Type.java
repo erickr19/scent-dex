@@ -11,7 +11,7 @@ import javax.persistence.*;
  */
 @Entity(name = "Type")
 @Table(name = "types")
-public class Types {
+public class Type {
     // instance variables
 
     //id

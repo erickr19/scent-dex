@@ -1,6 +1,5 @@
 package com.scentdex.entity;
 
-import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -13,7 +12,7 @@ import javax.persistence.*;
  */
 @Entity(name = "Note")
 @Table(name = "notes")
-public class Notes {
+public class Note {
     // instance variables
     //id
     @Id
@@ -28,7 +27,7 @@ public class Notes {
     // foreign key
     @ManyToOne
     @JoinColumn(name = "type_id")
-    private Types typeId;
+    private Type typeId;
 
     // setters and getters
 
@@ -68,7 +67,7 @@ public class Notes {
      * Gets the id of the type
      * @return the type id
      */
-    public Types getTypeId() {
+    public Type getTypeId() {
         return typeId;
     }
 
@@ -76,7 +75,7 @@ public class Notes {
      * Sets the type id
      * @param typeId the tpye of the id to set
      */
-    public void setTypeId(Types typeId) {
+    public void setTypeId(Type typeId) {
         this.typeId = typeId;
     }
 
