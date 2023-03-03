@@ -21,13 +21,17 @@ public class User {
     public User() {}
 
     /**
-     * Constructor to create a new User
+     * Constructor that creates a new User
      * @param id The id of the user
+     * @param reviews The reviews of the user
+     * @param wishlist The wishlist of the user
      * @param email The email of the user
      * @param password The password of the user
      */
-    public User(int id, String email, String password) {
+    public User(int id, Set<Review> reviews, Set<Wishlist> wishlist, String email, String password) {
         this.id = id;
+        this.reviews = reviews;
+        this.wishlist = wishlist;
         this.email = email;
         this.password = password;
     }
