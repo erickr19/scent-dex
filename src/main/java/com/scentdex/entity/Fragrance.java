@@ -13,6 +13,29 @@ import javax.persistence.*;
 @Entity(name = "Fragrance")
 @Table(name = "fragrances")
 public class Fragrance {
+    /**
+     * Empty constructor
+     */
+    public Fragrance() {}
+
+    /**
+     * Instantiating Fragrance constructor
+     * @param id The id of the fragrance
+     * @param name The name of the fragrance
+     * @param designer The designer of the fragrance
+     * @param scentNotes The notes of the fragrance
+     * @param description The description of the fragrance
+     * @param pricing The pricing of the fragrance
+     */
+    public Fragrance(int id, String name, String designer, String scentNotes, String description, String pricing) {
+        this.id = id;
+        this.name = name;
+        this.designer = designer;
+        this.scentNotes = scentNotes;
+        this.description = description;
+        this.pricing = pricing;
+    }
+
     // instance variables
 
     // id
@@ -40,9 +63,6 @@ public class Fragrance {
     // pricing
     @Column(name = "pricing")
     private String pricing;
-
-    // empty constructor
-    public Fragrance() {}
 
     // setters and getters
 
