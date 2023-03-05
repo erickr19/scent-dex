@@ -1,4 +1,4 @@
-package com.scentdex;
+package com.scentdex.persistence;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.Metadata;
