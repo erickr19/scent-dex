@@ -47,7 +47,7 @@ DROP TABLE IF EXISTS `fragrances`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `fragrances` (
-  `fragranceId` int NOT NULL,
+  `fragranceId` int NOT NULL AUTO_INCREMENT,
   `name` varchar(100) DEFAULT NULL,
   `designer` varchar(100) DEFAULT NULL,
   `description` varchar(200) DEFAULT NULL,
@@ -71,7 +71,7 @@ DROP TABLE IF EXISTS `notes`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `notes` (
-  `noteId` int NOT NULL,
+  `noteId` int NOT NULL AUTO_INCREMENT,
   `type` int NOT NULL,
   `name` varchar(10) DEFAULT NULL,
   PRIMARY KEY (`noteId`),
@@ -95,7 +95,7 @@ DROP TABLE IF EXISTS `reviews`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `reviews` (
-  `reviewId` int NOT NULL,
+  `reviewId` int NOT NULL AUTO_INCREMENT,
   `user` int NOT NULL,
   `fragrance` int NOT NULL,
   `addedTime` date NOT NULL DEFAULT (curdate()),
@@ -125,7 +125,7 @@ DROP TABLE IF EXISTS `types`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `types` (
-  `typeId` int NOT NULL,
+  `typeId` int NOT NULL AUTO_INCREMENT,
   `name` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`typeId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -146,7 +146,7 @@ DROP TABLE IF EXISTS `users`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `users` (
-  `userId` int NOT NULL,
+  `userId` int NOT NULL AUTO_INCREMENT,
   `createDate` date NOT NULL DEFAULT (curdate()),
   `email` varchar(60) DEFAULT NULL,
   `password` varchar(60) DEFAULT NULL,
@@ -169,7 +169,7 @@ DROP TABLE IF EXISTS `wishlist`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `wishlist` (
-  `wishlistId` int NOT NULL,
+  `wishlistId` int NOT NULL AUTO_INCREMENT,
   `user` int NOT NULL,
   `fragrance` int NOT NULL,
   `addedTime` timestamp NOT NULL DEFAULT (curdate()),
