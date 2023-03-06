@@ -185,7 +185,7 @@ CREATE TABLE `wishlist` (
   KEY `fragrance` (`fragrance`),
   CONSTRAINT `wishlist_ibfk_1` FOREIGN KEY (`user`) REFERENCES `users` (`userId`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `wishlist_ibfk_2` FOREIGN KEY (`fragrance`) REFERENCES `fragrances` (`fragranceId`) ON DELETE RESTRICT ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -193,6 +193,7 @@ CREATE TABLE `wishlist` (
 --
 
 LOCK TABLES `wishlist` WRITE;
+INSERT INTO `wishlist` (`wishlistId`, `user`, `fragrance`, `addedTime`) VALUES (1,1,1,'2023-03-06 06:00:00');
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -204,4 +205,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-03-06 15:03:14
+-- Dump completed on 2023-03-06 15:45:16

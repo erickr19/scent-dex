@@ -1,5 +1,6 @@
 package com.scentdex.persistence;
 
+import com.scentdex.entity.User;
 import com.scentdex.testUtils.Database;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -16,7 +17,9 @@ class UserDaoTest {
     Database db;
     @BeforeEach
     void setUp() {
-
+        dao = new GenericDao(User.class);
+        db = Database.getInstance();
+        db.runSQL()
     }
 
     @Test
