@@ -125,6 +125,20 @@ public class GenericDao<T> {
             logger.error("Hibernate Exception: failed to get by id", hibernateE);
         }
     }
+
+    /**
+     * Gets all entities
+     * @return entities
+     */
+    public List<T> getAll() {
+        Session session = getSession();
+        CriteriaBuilder builder = session.getCriteriaBuilder();
+        CriteriaQuery<T> query = builder.createQuery(type);
+        List<T> list = session.createQuery(query).getResultList();
+        session.close();
+        return list;
+    }
+
     /**
      * Gets open session from factory
      * @return session

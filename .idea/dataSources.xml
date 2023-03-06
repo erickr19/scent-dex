@@ -1,19 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="ScentDex@localhost" uuid="88f67142-be32-49a2-8415-04921ecc71d0">
-      <driver-ref>mysql.8</driver-ref>
-      <synchronize>true</synchronize>
-      <remarks>scentdex db source</remarks>
-      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/ScentDex</jdbc-url>
-      <working-dir>$ProjectFileDir$</working-dir>
-    </data-source>
-    <data-source source="LOCAL" name="ScentDex-Test@localhost" uuid="8d8114b4-21d2-4d4e-93aa-fbddcc4b6f0e">
+    <data-source source="LOCAL" name="ScentDexTest@localhost" uuid="7988acef-5310-4f7b-aea5-f85833997c22">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/ScentDex-Test</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306/ScentDexTest</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>
