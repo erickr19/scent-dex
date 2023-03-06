@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.31, for macos12 (arm64)
+-- MySQL dump 10.13  Distrib 8.0.32, for macos13 (arm64)
 --
--- Host: 127.0.0.1    Database: ScentDex
+-- Host: 127.0.0.1    Database: ScentdexTest
 -- ------------------------------------------------------
--- Server version	8.0.31
+-- Server version	8.0.32
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -37,6 +37,7 @@ CREATE TABLE `fragrance_notes` (
 --
 
 LOCK TABLES `fragrance_notes` WRITE;
+INSERT INTO `fragrance_notes` (`fragrance`, `note`) VALUES (1,1),(1,2),(1,3),(1,4),(1,5),(1,6),(1,7),(1,8),(1,9),(1,10),(1,11),(1,12),(1,13),(1,14);
 UNLOCK TABLES;
 
 --
@@ -48,12 +49,12 @@ DROP TABLE IF EXISTS `fragrances`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `fragrances` (
   `fragranceId` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(100) DEFAULT NULL,
-  `designer` varchar(100) DEFAULT NULL,
-  `description` varchar(200) DEFAULT NULL,
-  `pricing` varchar(12) DEFAULT NULL,
+  `name` varchar(200) DEFAULT NULL,
+  `designer` varchar(200) DEFAULT NULL,
+  `description` varchar(500) DEFAULT NULL,
+  `pricing` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`fragranceId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -61,6 +62,7 @@ CREATE TABLE `fragrances` (
 --
 
 LOCK TABLES `fragrances` WRITE;
+INSERT INTO `fragrances` (`fragranceId`, `name`, `designer`, `description`, `pricing`) VALUES (1,'Eros Flame','Versace','In a fiery red bottle, Eros Flame is the fragrance of love and passion, deeply masculine and intense. In the words of Donatella Versace, \"The spark of true love is the dream that each of us pursues. True love captures the soul, body and mind, and never lets you go. It takes your breath away because without your beloved, you no longer feel complete. True love consumes everything in an eternal flame of passion.\" ','$107');
 UNLOCK TABLES;
 
 --
@@ -73,11 +75,11 @@ DROP TABLE IF EXISTS `notes`;
 CREATE TABLE `notes` (
   `noteId` int NOT NULL AUTO_INCREMENT,
   `type` int NOT NULL,
-  `name` varchar(10) DEFAULT NULL,
+  `name` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`noteId`),
   KEY `type` (`type`),
   CONSTRAINT `notes_ibfk_1` FOREIGN KEY (`type`) REFERENCES `types` (`typeId`) ON DELETE RESTRICT ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -85,6 +87,7 @@ CREATE TABLE `notes` (
 --
 
 LOCK TABLES `notes` WRITE;
+INSERT INTO `notes` (`noteId`, `type`, `name`) VALUES (1,1,'Black pepper'),(2,6,'Chinotto'),(3,6,'Mandarin'),(4,6,'Lemon'),(5,3,'Rosemary'),(6,1,'Pepper'),(7,3,'Geranium'),(8,3,'Rose'),(9,1,'Vanilla'),(10,4,'Tonka bean'),(11,7,'Texas cedar'),(12,7,'Sandalwood'),(13,3,'Patchouli'),(14,5,'Oakmoss');
 UNLOCK TABLES;
 
 --
@@ -100,14 +103,14 @@ CREATE TABLE `reviews` (
   `fragrance` int NOT NULL,
   `addedTime` date NOT NULL DEFAULT (curdate()),
   `review` varchar(1000) DEFAULT NULL,
-  `rating` tinyint DEFAULT NULL,
+  `rating` tinyint NOT NULL,
   PRIMARY KEY (`reviewId`),
   KEY `user` (`user`),
   KEY `fragrance` (`fragrance`),
   CONSTRAINT `reviews_ibfk_1` FOREIGN KEY (`user`) REFERENCES `users` (`userId`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `reviews_ibfk_2` FOREIGN KEY (`fragrance`) REFERENCES `fragrances` (`fragranceId`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `reviews_chk_1` CHECK (((`rating` >= 0) and (`rating` <= 5)))
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -115,6 +118,7 @@ CREATE TABLE `reviews` (
 --
 
 LOCK TABLES `reviews` WRITE;
+INSERT INTO `reviews` (`reviewId`, `user`, `fragrance`, `addedTime`, `review`, `rating`) VALUES (1,1,1,'2023-03-06','I personally have this scent in my collection and I love it!!',5);
 UNLOCK TABLES;
 
 --
@@ -126,9 +130,9 @@ DROP TABLE IF EXISTS `types`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `types` (
   `typeId` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(20) DEFAULT NULL,
+  `name` varchar(60) DEFAULT NULL,
   PRIMARY KEY (`typeId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -136,6 +140,7 @@ CREATE TABLE `types` (
 --
 
 LOCK TABLES `types` WRITE;
+INSERT INTO `types` (`typeId`, `name`) VALUES (1,'Spice'),(2,'Fruit'),(3,'Flower'),(4,'Fruit'),(5,'Fungi'),(6,'Citrus'),(7,'Wood');
 UNLOCK TABLES;
 
 --
@@ -148,10 +153,11 @@ DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
   `userId` int NOT NULL AUTO_INCREMENT,
   `createDate` date NOT NULL DEFAULT (curdate()),
-  `email` varchar(60) DEFAULT NULL,
-  `password` varchar(60) DEFAULT NULL,
+  `email` varchar(100) NOT NULL,
+  `password` varchar(100) NOT NULL,
+  `username` varchar(20) NOT NULL,
   PRIMARY KEY (`userId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -159,6 +165,7 @@ CREATE TABLE `users` (
 --
 
 LOCK TABLES `users` WRITE;
+INSERT INTO `users` (`userId`, `createDate`, `email`, `password`, `username`) VALUES (1,'2023-03-06','ereyes3@madisoncollege.edu','hello','erickrey');
 UNLOCK TABLES;
 
 --
@@ -197,4 +204,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-03-03  9:57:57
+-- Dump completed on 2023-03-06 15:03:14

@@ -11,7 +11,9 @@
   <component name="ChangeListManager">
     <list default="true" id="637f9b54-8ac0-4522-8cd3-532ac466107c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scent-dex.iml" beforeDir="false" afterPath="$PROJECT_DIR$/scent-dex.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/scent-dex-dump.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/scent-dex-dump.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/scentdex/persistence/FragranceDaoTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -226,6 +228,8 @@
       <workItem from="1677542581774" duration="46336000" />
       <workItem from="1678048896820" duration="22000" />
       <workItem from="1678049052744" duration="1001000" />
+      <workItem from="1678128131593" duration="122000" />
+      <workItem from="1678132952861" duration="1745000" />
     </task>
     <servers />
   </component>
