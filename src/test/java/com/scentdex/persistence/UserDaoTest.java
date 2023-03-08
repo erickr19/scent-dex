@@ -16,21 +16,33 @@ import static org.junit.jupiter.api.Assertions.*;
 class UserDaoTest {
     // instance variables
     // declare dao
-    GenericDao dao;
+    GenericDao userDao;
     // declare db
     Database db;
     // declare user list
     List<User> users;
     @BeforeEach
     void setUp() {
-        dao = new GenericDao(User.class);
+        userDao = new GenericDao(User.class);
         db = Database.getInstance();
         db.runSQL("/scent-dex-dump.sql");
-        users = dao.getAll();
+        users = userDao.getAll();
     }
 
     @Test
     void insert() {
+        // create new user
+        User newUser = new User();
+        // add user data
+        newUser.setEmail("bobsmith@example.org");
+        newUser.setPassword("bsmtih123");
+        newUser.setUsername("smithyb");
+        // get new userId
+        int newUserId = userDao.insert(newUser);
+        // get inserted user
+        User insertedUser = (User) userDao.getById(newUserId);
+        // assert equals test
+        assertEquals("smithyb", insertedUser.getUsername());
     }
 
     @Test

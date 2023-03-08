@@ -19,25 +19,24 @@ public class User {
     private int UserId;
 
     //email
-    @Column(name = "email")
+    @Column(name = "email", nullable = false)
     private String email;
 
     // password
-    @Column(name = "password")
+    @Column(name = "password", nullable = false)
     private String password;
 
     // username
-    @Column(name = "username")
+    @Column(name = "username", nullable = false)
     private String username;
 
     // wishlist
-
-    @OneToOne(mappedBy = "user")
+    @OneToOne(mappedBy = "user", cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
     @PrimaryKeyJoinColumn
     private Wishlist wishlist;
 
     // review
-    @OneToMany(mappedBy = "user")
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "user")
     private Set<Review> review;
 
     // constructors
