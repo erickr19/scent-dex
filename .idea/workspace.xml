@@ -11,8 +11,6 @@
   <component name="ChangeListManager">
     <list default="true" id="637f9b54-8ac0-4522-8cd3-532ac466107c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scentdex/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scentdex/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/scent-dex-dump.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/scent-dex-dump.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/scentdex/persistence/UserDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/scentdex/persistence/UserDaoTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -119,7 +117,7 @@
   <component name="RunDashboard">
     <option name="openRunningConfigInTab" value="true" />
   </component>
-  <component name="RunManager" selected="JUnit.UserDaoTest.insert">
+  <component name="RunManager" selected="JUnit.UserDaoTest.update">
     <configuration name="UserDaoTest.getAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="scent-dex" />
       <extension name="coverage">
@@ -136,6 +134,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UserDaoTest.getById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="scent-dex" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.scentdex.persistence.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.scentdex.persistence" />
+      <option name="MAIN_CLASS_NAME" value="com.scentdex.persistence.UserDaoTest" />
+      <option name="METHOD_NAME" value="getById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UserDaoTest.insert" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="scent-dex" />
       <extension name="coverage">
@@ -147,6 +161,22 @@
       <option name="PACKAGE_NAME" value="com.scentdex.persistence" />
       <option name="MAIN_CLASS_NAME" value="com.scentdex.persistence.UserDaoTest" />
       <option name="METHOD_NAME" value="insert" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserDaoTest.update" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="scent-dex" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.scentdex.persistence.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.scentdex.persistence" />
+      <option name="MAIN_CLASS_NAME" value="com.scentdex.persistence.UserDaoTest" />
+      <option name="METHOD_NAME" value="update" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -257,6 +287,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UserDaoTest.update" />
+        <item itemvalue="JUnit.UserDaoTest.getById" />
         <item itemvalue="JUnit.UserDaoTest.insert" />
         <item itemvalue="JUnit.UserDaoTest.getAll" />
       </list>
@@ -287,7 +319,7 @@
       <workItem from="1678049052744" duration="1001000" />
       <workItem from="1678128131593" duration="122000" />
       <workItem from="1678132952861" duration="18588000" />
-      <workItem from="1678239739582" duration="16559000" />
+      <workItem from="1678239739582" duration="19504000" />
     </task>
     <servers />
   </component>

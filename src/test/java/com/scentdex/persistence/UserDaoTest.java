@@ -25,10 +25,13 @@ class UserDaoTest {
     void setUp() {
         userDao = new GenericDao(User.class);
         db = Database.getInstance();
-        db.runSQL("/scent-dex-dump.sql");
+        db.runSQL("scent-dex-dump.sql");
         users = userDao.getAll();
     }
 
+    /**
+     * Tests inserting a new user into the database.
+     */
     @Test
     void insert() {
         // create new user
@@ -42,17 +45,44 @@ class UserDaoTest {
         // get inserted user
         User insertedUser = (User) userDao.getById(newUserId);
         // assert equals test
-        assertEquals("smithyb", insertedUser.getUsername());
+        assertEquals(newUser.getUsername(), insertedUser.getUsername());
     }
 
+    /**
+     * Tests getting a user by id
+     * Tests id 1 as it's constant even when db is refreshed.
+     */
     @Test
     void getById() {
+        // get user
+        User fetchedUser = (User)userDao.getById(1);
+        // test username
+        assertEquals("erickrey", fetchedUser.getUsername());
     }
 
+    /**
+     * Tests updating a user in the database
+     * Tests user 1 as it's constant when db is refreshed.
+     */
     @Test
     void update() {
+        // new username
+        String newUsername = "elrey_erick";
+        // get user
+        User userToUpdate = (User)userDao.getById(1);
+        // set new username
+        userToUpdate.setUsername(newUsername);
+        // call update method
+        userDao.update(userToUpdate);
+        // get user once again
+        User updatedUser = (User)userDao.getById(1);
+        // test
+        assertEquals(newUsername, updatedUser.getUsername());
     }
 
+    /**
+     * Tests deleting a user in the database
+     */
     @Test
     void delete() {
     }
