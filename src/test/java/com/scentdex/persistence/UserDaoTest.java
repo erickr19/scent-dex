@@ -85,6 +85,10 @@ class UserDaoTest {
      */
     @Test
     void delete() {
+        // delete user
+        userDao.delete(userDao.getById(1));
+        // test
+        assertNull(userDao.getById(1));
     }
 
     @Test

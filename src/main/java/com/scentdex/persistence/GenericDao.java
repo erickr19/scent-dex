@@ -163,17 +163,29 @@ public class GenericDao<T> {
         return session.createQuery(query).getResultList();
     }
 
+    /**
+     * Finds entities by multiple properties
+     * @param propertyMap Thr properties to look for
+     * @return list of entities with given properties
+     */
     public List<T> findByProperty(Map<String, Object> propertyMap) {
+        // get session
         Session session = getSession();
+        // create criteria builder
         CriteriaBuilder builder = session.getCriteriaBuilder();
+        // create query
         CriteriaQuery<T> query = builder.createQuery(type);
+        // get root type from query
         Root<T> root = query.from(type);
+        // create list of properties to search for
         List<Predicate> predicates = new ArrayList<>();
+        // iterate through entities, getting matches
         for (Map.Entry entry: propertyMap.entrySet()) {
             predicates.add(builder.equal(root.get((String) entry.getKey()), entry.getValue()));
         }
+        // query for entities with matching properties
         query.select(root).where(builder.and(predicates.toArray(new Predicate[predicates.size()])));
-
+        // return list of entities
         return session.createQuery(query).getResultList();
     }
 }
