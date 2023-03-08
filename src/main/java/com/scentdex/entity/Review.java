@@ -1,54 +1,21 @@
 package com.scentdex.entity;
+
 import org.hibernate.annotations.GenericGenerator;
+
 import javax.persistence.*;
 
 /**
- * Review entity
- * A representation of a review as a bean.
- * Contains properties such as review, rating, fragranceId, and userId
+ * Review Javabean
  * @author ereyes3
  */
-
 @Entity(name = "Review")
 @Table(name = "reviews")
 public class Review {
-    /**
-     * Empty constructor
-     */
-    public Review() {}
-
-    /**
-     * Constructor that creates a new review
-     * @param id The id of the review
-     * @param user The user that owns the review
-     * @param fragrance The review of the specified fragrance
-     * @param review The body of the review
-     * @param rating The rating of the review
-     */
-    public Review(int id, User user, Fragrance fragrance, String review, int rating) {
-        this.id = id;
-        this.user = user;
-        this.fragrance = fragrance;
-        this.review = review;
-        this.rating = rating;
-    }
-
-    // instance variables
     // id
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
+    @GeneratedValue(strategy = GenerationType.AUTO, generator="native")
     @GenericGenerator(name = "native", strategy = "native")
-    private int id;
-
-    // user
-    @ManyToOne
-    @JoinColumn(name = "user")
-    private User user;
-
-    // fragrance
-    @ManyToOne
-    @JoinColumn(name = "fragrance")
-    private Fragrance fragrance;
+    private int reviewId;
 
     // review
     @Column(name = "review")
@@ -58,40 +25,75 @@ public class Review {
     @Column(name = "rating")
     private int rating;
 
+    // fragrance
+    @ManyToOne
+    @JoinColumn(name = "fragrance_id")
+    private Fragrance fragrance;
+
+    // user
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
+
+    // constructors
+
     /**
-     * Gets review id
-     * @return review id
+     * Creates a new instance of a Review (empty)
      */
-    public int getId() {
-        return id;
+    public Review() {}
+
+    /**
+     * Creates a new instance of a Review
+     * @param reviewId the review id
+     * @param review the review
+     * @param rating the rating (out of 5)
+     * @param fragrance the fragrance being reviewed
+     * @param user the user creating the review
+     */
+    public Review(int reviewId, String review, int rating, Fragrance fragrance, User user) {
+        this.reviewId = reviewId;
+        this.review = review;
+        this.rating = rating;
+        this.fragrance = fragrance;
+        this.user = user;
+    }
+
+    // setters and getters
+
+    /**
+     * Gets the review id
+     * @return reviewId
+     */
+    public int getReviewId() {
+        return reviewId;
     }
 
     /**
-     * Sets id of review
-     * @param id The review id
+     * Sets the review id
+     * @param reviewId reviewId
      */
-    public void setId(int id) {
-        this.id = id;
+    public void setReviewId(int reviewId) {
+        this.reviewId = reviewId;
     }
 
     /**
-     * Gets review body
-     * @return The body of the review
+     * Gets the review
+     * @return review
      */
     public String getReview() {
         return review;
     }
 
     /**
-     * Sets review body
-     * @param review The body of the review to set
+     * Sets the review
+     * @param review review
      */
     public void setReview(String review) {
         this.review = review;
     }
 
     /**
-     * Gets rating of review
+     * Gets the rating
      * @return rating
      */
     public int getRating() {
@@ -99,15 +101,31 @@ public class Review {
     }
 
     /**
-     * Sets of rating of review
-     * @param rating The rating
+     * Sets the review
+     * @param rating the rating
      */
     public void setRating(int rating) {
         this.rating = rating;
     }
 
     /**
-     * Gets user
+     * Gets the fragrance
+     * @return fragrance
+     */
+    public Fragrance getFragrance() {
+        return fragrance;
+    }
+
+    /**
+     * Sets the fragrance
+     * @param fragrance the fragrance
+     */
+    public void setFragrance(Fragrance fragrance) {
+        this.fragrance = fragrance;
+    }
+
+    /**
+     * Gets the user
      * @return user
      */
     public User getUser() {
@@ -115,29 +133,10 @@ public class Review {
     }
 
     /**
-     * Sets user
-     * @param user The user of the review
+     * Sets the user
+     * @param user the user
      */
     public void setUser(User user) {
         this.user = user;
     }
-
-    /**
-     * Gets fragrance
-     * @return the fragrance
-     */
-    public Fragrance getFragrance() {
-        return fragrance;
-    }
-
-    /**
-     * Sets the fragrance reviewed
-     * @param fragrance the fragrance reviewed
-     */
-    public void setFragrance(Fragrance fragrance) {
-        this.fragrance = fragrance;
-    }
-
-
-    // TODO: Create a toString() method with string builder
 }

@@ -19,7 +19,6 @@
         <mapping class="com.scentdex.entity.Fragrance" />
         <mapping class="com.scentdex.entity.Note"/>
         <mapping class="com.scentdex.entity.Review"/>
-        <mapping class="com.scentdex.entity.Type"/>
         <mapping class="com.scentdex.entity.User"/>
         <mapping class="com.scentdex.entity.Wishlist"/>
     </session-factory>

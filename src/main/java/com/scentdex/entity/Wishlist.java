@@ -1,93 +1,98 @@
 package com.scentdex.entity;
-import org.hibernate.annotations.Cascade;
+
 import org.hibernate.annotations.GenericGenerator;
+
 import javax.persistence.*;
 
 /**
- * Wishlist entity
- * A representation of a wishlist as a bean.
- * Contains properties such as id, addedTime, userId, and fragranceId.
+ * Wishlist Javabean
  * @author ereyes3
  */
-
 @Entity(name = "Wishlist")
 @Table(name = "wishlist")
 public class Wishlist {
-    /**
-     * Empty constructor
-     */
-    public Wishlist() {}
 
-    /**
-     * Constructor that creates a new Wishlist
-     * @param id The id of the wishlist
-     * @param user The user of the wishlist
-     * @param fragrance The fragrance of the wishlist
-     */
-    public Wishlist(int id, User user, Fragrance fragrance) {
-        this.id = id;
-        this.user = user;
-        this.fragrance = fragrance;
-    }
-
-    // instance variables
     // id
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator="native")
     @GenericGenerator(name = "native", strategy = "native")
-    private int id;
+    private int wishlistId;
 
-    @OneToOne
-    @JoinColumn(name = "user")
-    private User user;
-
+    // fragrance
     @ManyToOne
-    @JoinColumn(name = "fragrance")
+    @JoinColumn(name = "fragrance_id")
     private Fragrance fragrance;
 
+    // user
+    @OneToOne(orphanRemoval = true)
+    @MapsId
+    @JoinColumn(name = "user_id")
+    private User user;
+
+    // constructors
+
     /**
-     * Gets id of the wishlist
-     * @return the wishlist id
+     * Creates a new Wishlist (empty)
      */
-    public int getId() {
-        return id;
+    public Wishlist() {}
+
+    /**
+     * Creates a new Wishlist
+     * @param wishlistId the wishlist id
+     * @param fragrance the fragrance being added to the list
+     * @param user the user that the list belongs to
+     */
+    public Wishlist(int wishlistId, Fragrance fragrance, User user) {
+        this.wishlistId = wishlistId;
+        this.fragrance = fragrance;
+        this.user = user;
+    }
+
+    // setters and getters
+
+    /**
+     * Gets wishlistId
+     * @return wishlistId
+     */
+    public int getWishlistId() {
+        return wishlistId;
     }
 
     /**
-     * Sets the wishlist id
-     * @param id the id to set
+     * Sets wishlistId
+     * @param wishlistId the wishlistId
      */
-    public void setId(int id) {
-        this.id = id;
+    public void setWishlistId(int wishlistId) {
+        this.wishlistId = wishlistId;
     }
 
     /**
-     * Gets the user of the wishlist
-     * @return the wishlist
+     * Gets user
+     * @return user
      */
     public User getUser() {
         return user;
     }
 
     /**
-     * Sets the user of the wishlist
-     * @param user The user
+     * Sets user
+     * @param user the user
      */
     public void setUser(User user) {
         this.user = user;
     }
 
     /**
-     * Gets the fragrance from the wishlist
-     * @return the fragrance
+     * Gets fragrance
+     * @return fragrance
      */
     public Fragrance getFragrance() {
         return fragrance;
     }
 
     /**
-     * Sets the fragrance in the wishlist
-     * @param fragrance The fragrance
+     * Sets fragrance
+     * @param fragrance the fragrance
      */
     public void setFragrance(Fragrance fragrance) {
         this.fragrance = fragrance;

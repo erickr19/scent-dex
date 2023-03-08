@@ -1,4 +1,5 @@
 package com.scentdex.entity;
+
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -6,64 +7,17 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Fragrance entity
- * A representation of a fragrance as a JavaBean.
- * Contains properties such as id, name, designer, and more.
+ * Fragrance Javabean
  * @author ereyes3
  */
-
 @Entity(name = "Fragrance")
 @Table(name = "fragrances")
 public class Fragrance {
-    /**
-     * Empty constructor
-     */
-    public Fragrance() {}
-
-    /**
-     * Constructor that creates a new Fragrance
-     * @param id The id
-     * @param reviews The reviews
-     * @param wishlists The wishlists
-     * @param name The name
-     * @param designer The designer
-     * @param notes The notes
-     * @param description The description
-     * @param pricing The pricing
-     */
-    public Fragrance(int id, Set<Review> reviews, Set<Wishlist> wishlists, Set<Note> notes, String name, String designer, String description, String pricing) {
-        this.id = id;
-        this.reviews = reviews;
-        this.wishlists = wishlists;
-        this.notes = notes;
-        this.name = name;
-        this.designer = designer;
-        this.description = description;
-        this.pricing = pricing;
-    }
-
-    // instance variables
-
     // id
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator="native")
     @GenericGenerator(name = "native", strategy = "native")
-    private int id;
-
-    // reviews
-    @OneToMany(mappedBy = "reviews")
-    private Set<Review> reviews = new HashSet<>();
-
-    @OneToMany(mappedBy = "wishlist")
-    private Set<Wishlist> wishlists = new HashSet<>();
-
-    @ManyToMany
-    @JoinTable(
-            name = "fragrance_notes",
-            joinColumns = { @JoinColumn(name="fragrance") },
-            inverseJoinColumns = { @JoinColumn(name="note") }
-    )
-    private Set<Note> notes = new HashSet<>();
+    private int fragranceId;
 
     // name
     @Column(name = "name")
@@ -81,122 +35,167 @@ public class Fragrance {
     @Column(name = "pricing")
     private String pricing;
 
+    // reviews
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "fragrance")
+    private Set<Review> review;
+
+    // wishlist
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "fragrance")
+    private Set<Wishlist> wishlist;
+
+    // fragrance_notes
+    @ManyToMany
+    @JoinTable(
+            name = "fragrance_notes",
+            joinColumns = { @JoinColumn(name = "fragrance_id") },
+            inverseJoinColumns = { @JoinColumn(name = "note_id") }
+    )
+    private Set<Note> notes = new HashSet<>();
+    // constructors
+
+    /**
+     * Creates a fragrance (empty)
+     */
+    public Fragrance() {}
+
+    /**
+     * Creates a fragrance
+     * @param fragranceId the fragrance id
+     * @param name the name
+     * @param designer the designer
+     * @param description the description
+     * @param pricing the pricing
+     * @param review the reviews associated with the fragrance
+     * @param wishlist the wishlists associated with the fragrance
+     * @param notes the notes associated with the fragrance
+     */
+    public Fragrance(int fragranceId, String name, String designer, String description, String pricing, Set<Review> review, Set<Wishlist> wishlist, Set<Note> notes) {
+        this.fragranceId = fragranceId;
+        this.name = name;
+        this.designer = designer;
+        this.description = description;
+        this.pricing = pricing;
+        this.review = review;
+        this.wishlist = wishlist;
+        this.notes = notes;
+    }
+
     // setters and getters
 
     /**
-     * Returns fragrance id
-     * @return id The id of the fragrance
+     * Gets fragranceId
+     * @return fragranceId
      */
-    public int getId() {
-        return id;
+    public int getFragranceId() {
+        return fragranceId;
     }
 
     /**
-     * Sets fragrance id
-     * @param id The id to set
+     * Sets fragranceId
+     * @param fragranceId the fragranceId
      */
-    public void setId(int id) {
-        this.id = id;
+    public void setFragranceId(int fragranceId) {
+        this.fragranceId = fragranceId;
     }
 
     /**
-     * Returns fragrance name
-     * @return name The fragrance name
+     * Gets name
+     * @return name
      */
     public String getName() {
         return name;
     }
 
     /**
-     * Sets fragrance name
-     * @param name The fragrance name
+     * Sets name
+     * @param name fragrance name
      */
     public void setName(String name) {
         this.name = name;
     }
 
     /**
-     * Returns designer name
-     * @return designer The designer's name
+     * Gets designer
+     * @return designer
      */
     public String getDesigner() {
         return designer;
     }
 
     /**
-     * Sets designer name
-     * @param designer The designer's name
+     * Sets designer
+     * @param designer fragrance designer
      */
     public void setDesigner(String designer) {
         this.designer = designer;
     }
 
     /**
-     * Returns the description
-     * @return The description
+     * Gets description
+     * @return description
      */
     public String getDescription() {
         return description;
     }
 
     /**
-     * Sets the description
-     * @param description The description
+     * Sets description
+     * @param description fragrance description
      */
     public void setDescription(String description) {
         this.description = description;
     }
 
     /**
-     * Returns the pricing
-     * @return Pricing of
+     * Gets pricing
+     * @return pricing
      */
     public String getPricing() {
         return pricing;
     }
 
     /**
-     * Sets the pricing
-     * @param pricing The pricing
+     * Sets pricing
+     * @param pricing fragrance pricing
      */
     public void setPricing(String pricing) {
         this.pricing = pricing;
     }
 
     /**
-     * Gets reviews with specified fragrance
-     * @return reviews with specified fragrance
+     * Gets reviews
+     * @return review
      */
-    public Set<Review> getReviews() {
-        return reviews;
+    public Set<Review> getReview() {
+        return review;
     }
 
     /**
-     * Sets the reviews with specified fragrance
-     * @param reviews
+     * Sets reviews
+     * @param review reviews of the fragrance
      */
-    public void setReviews(Set<Review> reviews) {
-        this.reviews = reviews;
+    public void setReview(Set<Review> review) {
+        this.review = review;
     }
 
     /**
-     * Gets wishlists with specified fragrance
-     * @return
+     * Gets wishlists
+     * @return wishlist
      */
-    public Set<Wishlist> getWishlists() {
-        return wishlists;
+    public Set<Wishlist> getWishlist() {
+        return wishlist;
     }
 
     /**
-     * Sets wishlists with specified fragrance
-     * @param wishlists
+     * Sets wishlists
+     * @param wishlist the wishlists of the fragrance
      */
-    public void setWishlists(Set<Wishlist> wishlists) {
-        this.wishlists = wishlists;
+    public void setWishlist(Set<Wishlist> wishlist) {
+        this.wishlist = wishlist;
     }
 
     /**
-     * Gets the notes of the fragrance
+     * Gets notes
      * @return notes
      */
     public Set<Note> getNotes() {
@@ -204,25 +203,10 @@ public class Fragrance {
     }
 
     /**
-     * Sets the notes of the fragrance
-     * @param notes notes of the fragrance
+     * Sets notes
+     * @param notes the notes of the fragrance
      */
     public void setNotes(Set<Note> notes) {
         this.notes = notes;
-    }
-
-    /**
-     * Lists all the properties of a fragrance
-     * @return properties for a fragrance
-     */
-    @Override
-    public String toString() {
-        return "Fragrance{" +
-                "name='" + name + '\'' +
-                ", designer='" + designer + '\'' +
-                ", scent notes='" + notes + '\'' +
-                ", description='" + description + '\'' +
-                ", pricing='" + pricing + '\'' +
-                '}';
     }
 }

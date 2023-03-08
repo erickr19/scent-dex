@@ -1,57 +1,24 @@
 package com.scentdex.entity;
+
 import org.hibernate.annotations.GenericGenerator;
+
 import javax.persistence.*;
-import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Users entity
- * A representation of a user as a bean.
- * Contains properties such as creation date, email, password, and userId.
+ * User Javabean
  * @author ereyes3
  */
 @Entity(name = "User")
 @Table(name = "users")
 public class User {
-    // constructors
-
-    /**
-     * Empty constructor
-     */
-    public User() {}
-
-    /**
-     * Constructor that creates a new User
-     * @param id The id of the user
-     * @param reviews The reviews of the user
-     * @param wishlist The wishlist of the user
-     * @param email The email of the user
-     * @param password The password of the user
-     */
-    public User(int id, Set<Review> reviews, Set<Wishlist> wishlist, String email, String password) {
-        this.id = id;
-        this.reviews = reviews;
-        this.wishlist = wishlist;
-        this.email = email;
-        this.password = password;
-    }
-
-    // instance variables
     // id
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator="native")
     @GenericGenerator(name = "native", strategy = "native")
-    private int id;
+    private int UserId;
 
-    // reviewId
-    @OneToMany(mappedBy = "review")
-    private Set<Review> reviews = new HashSet<>();
-
-    // wishlistId
-    @OneToMany(mappedBy = "wishlist")
-    private Set<Wishlist> wishlist = new HashSet<>();
-
-    // email
+    //email
     @Column(name = "email")
     private String email;
 
@@ -59,35 +26,74 @@ public class User {
     @Column(name = "password")
     private String password;
 
+    // username
+    @Column(name = "username")
+    private String username;
+
+    // wishlist
+
+    @OneToOne(mappedBy = "user")
+    @PrimaryKeyJoinColumn
+    private Wishlist wishlist;
+
+    // review
+    @OneToMany(mappedBy = "user")
+    private Set<Review> review;
+
+    // constructors
+
+    /**
+     * Creates a new User (empty)
+     */
+    public User() {}
+
+    /**
+     * Creates a new User
+     * @param userId userId
+     * @param email the email
+     * @param password the password
+     * @param username the username
+     * @param wishlist wishlist of the user (nullable)
+     * @param review the reviews the user has created
+     */
+    public User(int userId, String email, String password, String username, Wishlist wishlist, Set<Review> review) {
+        UserId = userId;
+        this.email = email;
+        this.password = password;
+        this.username = username;
+        this.wishlist = wishlist;
+        this.review = review;
+    }
+
     // setters and getters
 
     /**
-     * Gets user id
-     * @return user id
+     * Gets userId
+     * @return userId
      */
-    public int getId() {
-        return id;
+    public int getUserId() {
+        return UserId;
     }
 
     /**
-     * Sets user id
-     * @param id The user id to set
+     * Sets userId
+     * @param userId the userId
      */
-    public void setId(int id) {
-        this.id = id;
+    public void setUserId(int userId) {
+        UserId = userId;
     }
 
     /**
      * Gets email
-     * @return the user's email
+     * @return email
      */
     public String getEmail() {
         return email;
     }
 
     /**
-     * Sets the users email
-     * @param email The email to set
+     * Sets email
+     * @param email user's email
      */
     public void setEmail(String email) {
         this.email = email;
@@ -95,51 +101,65 @@ public class User {
 
     /**
      * Gets password
-     * @return the password of the user
+     * @return password
      */
     public String getPassword() {
         return password;
     }
 
     /**
-     * Sets the password
-     * @param password the password to set
+     * Sets password
+     * @param password password
      */
     public void setPassword(String password) {
         this.password = password;
     }
 
     /**
-     * Gets reviews of the user
-     * @return reviews
+     * Gets username
+     * @return username
      */
-    public Set<Review> getReviews() {
-        return reviews;
+    public String getUsername() {
+        return username;
     }
 
     /**
-     * Sets reviews of the user
-     * @param reviews the reviews to set
+     * Sets username
+     * @param username username
      */
-    public void setReviews(Set<Review> reviews) {
-        this.reviews = reviews;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     /**
-     * Get wishlist of the user
+     * Gets wishlist
      * @return wishlist
      */
-    public Set<Wishlist> getWishlist() {
+    public Wishlist getWishlist() {
         return wishlist;
     }
 
     /**
-     * Set wishlist of the user
-     * @param wishlists wishlist
+     * Sets wishlist
+     * @param wishlist wishlist
      */
-    public void setWishlist(Set<Wishlist> wishlists) {
-        this.wishlist = wishlists;
+    public void setWishlist(Wishlist wishlist) {
+        this.wishlist = wishlist;
     }
 
-    // TODO: Create a toStiring() method with string builder
+    /**
+     * Gets reviews
+     * @return review
+     */
+    public Set<Review> getReview() {
+        return review;
+    }
+
+    /**
+     * Sets reviews
+     * @param review user created reviews
+     */
+    public void setReview(Set<Review> review) {
+        this.review = review;
+    }
 }

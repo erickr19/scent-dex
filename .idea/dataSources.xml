@@ -8,5 +8,27 @@
       <jdbc-url>jdbc:mysql://localhost:3306/ScentDexTest</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="hibernate.cfg.xml/Hibernate" uuid="90108b35-4147-41b9-aa3a-ad275b36196a">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>Hibernate
+
+/Users/reyesmac/Library/Mobile Documents/com~apple~CloudDocs/MATC IT Program/spring2023/ent java/Enterprise Repos/scent-dex/src/main/resources/hibernate.cfg.xml</remarks>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/ScentDexTest</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="hibernate.cfg.xml/Hibernate" uuid="9367c8d9-ab68-4852-823f-b537ba2b6d94">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>Hibernate
+
+/Users/reyesmac/Library/Mobile Documents/com~apple~CloudDocs/MATC IT Program/spring2023/ent java/Enterprise Repos/scent-dex/src/test/resources/hibernate.cfg.xml</remarks>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/ScentDexTest</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>

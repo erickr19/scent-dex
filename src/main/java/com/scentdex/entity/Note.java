@@ -7,106 +7,81 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Notes entity
- * A representation of fragrance notes as a bean.
- * Contains properties like id, name, and type.
+ * Notes Javabean
  * @author ereyes3
  */
 @Entity(name = "Note")
 @Table(name = "notes")
 public class Note {
-    /**
-     * Empty constructor
-     */
-    public Note() {}
-
-    /**
-     * Constructor to create a new Note
-     *
-     * @param id          The id of the note
-     * @param name        The name of the note
-     * @param type      The type of the note
-     * @param fragrances The fragrances the note is associated with
-     */
-    public Note(int id, String name, Type type, Set<Fragrance> fragrances) {
-        this.id = id;
-        this.name = name;
-        this.type = type;
-        this.fragrances = fragrances;
-    }
-
-    // instance variables
-    //id
+    // id
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator="native")
     @GenericGenerator(name = "native", strategy = "native")
-    private int id;
+    private int noteId;
 
     // name
     @Column(name = "name")
     private String name;
 
-    // foreign key
-    @ManyToOne
-    @JoinColumn(name = "type")
-    private Type type;
-
-    // many to many
+    // fragrance_notes
     @ManyToMany(mappedBy = "notes")
     private Set<Fragrance> fragrances = new HashSet<>();
+
+    // constructors
+
+    /**
+     * Creates a new Note (empty)
+     */
+    public Note() {}
+
+    /**
+     * Creates a new Note
+     * @param noteId noteId
+     * @param name the note's name
+     * @param fragrances the fragrances associated with the note
+     */
+    public Note(int noteId, String name, Set<Fragrance> fragrances) {
+        this.noteId = noteId;
+        this.name = name;
+        this.fragrances = fragrances;
+    }
 
     // setters and getters
 
     /**
-     * Gets id of the note
-     * @return note id
+     * Gets noteId
+     * @return noteId
      */
-    public int getId() {
-        return id;
+    public int getNoteId() {
+        return noteId;
     }
 
     /**
-     * Sets id of the note
-     * @param id the note id to set
+     * Sets noteId
+     * @param noteId noteId
      */
-    public void setId(int id) {
-        this.id = id;
+    public void setNoteId(int noteId) {
+        this.noteId = noteId;
     }
 
     /**
-     * Gets the name of the note
-     * @return the note name
+     * Gets name
+     * @return name
      */
     public String getName() {
         return name;
     }
 
     /**
-     * Sets the name of the note
-     * @param name the note name to set
+     * Sets name
+     * @param name note name
      */
     public void setName(String name) {
         this.name = name;
     }
 
     /**
-     * Gets the id of the type
-     * @return the type id
-     */
-    public Type getType() {
-        return type;
-    }
-
-    /**
-     * Sets the type id
-     * @param type the type of the id to set
-     */
-    public void setType(Type type) {
-        this.type = type;
-    }
-
-    /**
-     * Gets the fragrances associated with the note
+     * Gets fragrances
      * @return fragrances
      */
     public Set<Fragrance> getFragrances() {
@@ -114,12 +89,10 @@ public class Note {
     }
 
     /**
-     * Sets the fragrances associated with the note
-     * @param fragrances the fragrances to set
+     * Sets fragrances
+     * @param fragrances fragrances associated with this note
      */
     public void setFragrances(Set<Fragrance> fragrances) {
         this.fragrances = fragrances;
     }
-
-    // TODO: Make a toString() method using string builder
 }

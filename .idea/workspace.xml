@@ -10,8 +10,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="637f9b54-8ac0-4522-8cd3-532ac466107c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/88f67142-be32-49a2-8415-04921ecc71d0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/88f67142-be32-49a2-8415-04921ecc71d0/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/88f67142-be32-49a2-8415-04921ecc71d0/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/88f67142-be32-49a2-8415-04921ecc71d0/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/88f67142-be32-49a2-8415-04921ecc71d0/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scent-dex.iml" beforeDir="false" afterPath="$PROJECT_DIR$/scent-dex.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/scentdex/entity/Fragrance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scentdex/entity/Fragrance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/scentdex/entity/Note.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scentdex/entity/Note.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/scentdex/entity/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scentdex/entity/Review.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/scentdex/entity/Type.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/scentdex/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scentdex/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/scentdex/entity/Wishlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scentdex/entity/Wishlist.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/scentdex/persistence/GenericDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scentdex/persistence/GenericDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/scentdex/persistence/UserDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/scentdex/persistence/UserDaoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/database.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/database.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/scentdex/entity/Fragrance.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/scentdex/entity/Fragrance.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/scentdex/persistence/FragranceDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +43,8 @@
       <list>
         <option value="CSS File" />
         <option value="Jsp File" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -59,34 +79,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "last_opened_file_path": "/Users/reyesmac/Library/Mobile Documents/com~apple~CloudDocs/MATC IT Program/spring2023/ent java/Enterprise Repos/scent-dex/src/test/resources",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.18163265",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/reyesmac/Library/Mobile Documents/com~apple~CloudDocs/MATC IT Program/spring2023/ent java/Enterprise Repos/scent-dex/src/test/resources&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.18163265&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/test/resources" />
@@ -114,7 +134,23 @@
   <component name="RunDashboard">
     <option name="openRunningConfigInTab" value="true" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.UserDaoTest.getAll">
+    <configuration name="UserDaoTest.getAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="scent-dex" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.scentdex.persistence.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.scentdex.persistence" />
+      <option name="MAIN_CLASS_NAME" value="com.scentdex.persistence.UserDaoTest" />
+      <option name="METHOD_NAME" value="getAll" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="ScentDex" />
       <method v="2">
@@ -218,6 +254,11 @@
         </option>
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.UserDaoTest.getAll" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -243,7 +284,8 @@
       <workItem from="1678048896820" duration="22000" />
       <workItem from="1678049052744" duration="1001000" />
       <workItem from="1678128131593" duration="122000" />
-      <workItem from="1678132952861" duration="4231000" />
+      <workItem from="1678132952861" duration="18588000" />
+      <workItem from="1678239739582" duration="12959000" />
     </task>
     <servers />
   </component>
