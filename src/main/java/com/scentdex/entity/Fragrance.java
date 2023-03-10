@@ -44,7 +44,7 @@ public class Fragrance {
     private Set<Wishlist> wishlist;
 
     // fragrance_notes
-    @ManyToMany
+    @ManyToMany(cascade = {CascadeType.DETACH})
     @JoinTable(
             name = "fragrance_notes",
             joinColumns = { @JoinColumn(name = "fragrance_id") },

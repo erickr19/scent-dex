@@ -10,10 +10,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="637f9b54-8ac0-4522-8cd3-532ac466107c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/scentdex/persistence/WishlistDaoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/scentdex/persistence/FragranceDaoTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scentdex/persistence/GenericDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scentdex/persistence/GenericDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/scentdex/persistence/UserDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/scentdex/persistence/UserDaoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/scentdex/entity/Fragrance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scentdex/entity/Fragrance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/scentdex/persistence/WishlistDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/scentdex/persistence/WishlistDaoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/scentdex/entity/Fragrance.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/scentdex/entity/Fragrance.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,8 +121,8 @@
   <component name="RunDashboard">
     <option name="openRunningConfigInTab" value="true" />
   </component>
-  <component name="RunManager" selected="JUnit.UserDaoTest">
-    <configuration name="UserDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.FragranceDaoTest.delete">
+    <configuration name="FragranceDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="scent-dex" />
       <extension name="coverage">
         <pattern>
@@ -130,13 +131,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.scentdex.persistence" />
-      <option name="MAIN_CLASS_NAME" value="com.scentdex.persistence.UserDaoTest" />
+      <option name="MAIN_CLASS_NAME" value="com.scentdex.persistence.FragranceDaoTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserDaoTest.delete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FragranceDaoTest.delete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="scent-dex" />
       <extension name="coverage">
         <pattern>
@@ -145,14 +146,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.scentdex.persistence" />
-      <option name="MAIN_CLASS_NAME" value="com.scentdex.persistence.UserDaoTest" />
+      <option name="MAIN_CLASS_NAME" value="com.scentdex.persistence.FragranceDaoTest" />
       <option name="METHOD_NAME" value="delete" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserDaoTest.findByProperty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FragranceDaoTest.findByPropertyEqual" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="scent-dex" />
       <extension name="coverage">
         <pattern>
@@ -161,14 +162,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.scentdex.persistence" />
-      <option name="MAIN_CLASS_NAME" value="com.scentdex.persistence.UserDaoTest" />
-      <option name="METHOD_NAME" value="findByProperty" />
+      <option name="MAIN_CLASS_NAME" value="com.scentdex.persistence.FragranceDaoTest" />
+      <option name="METHOD_NAME" value="findByPropertyEqual" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserDaoTest.getById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FragranceDaoTest.getById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="scent-dex" />
       <extension name="coverage">
         <pattern>
@@ -177,14 +178,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.scentdex.persistence" />
-      <option name="MAIN_CLASS_NAME" value="com.scentdex.persistence.UserDaoTest" />
+      <option name="MAIN_CLASS_NAME" value="com.scentdex.persistence.FragranceDaoTest" />
       <option name="METHOD_NAME" value="getById" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserDaoTest.update" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FragranceDaoTest.insert" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="scent-dex" />
       <extension name="coverage">
         <pattern>
@@ -193,8 +194,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.scentdex.persistence" />
-      <option name="MAIN_CLASS_NAME" value="com.scentdex.persistence.UserDaoTest" />
-      <option name="METHOD_NAME" value="update" />
+      <option name="MAIN_CLASS_NAME" value="com.scentdex.persistence.FragranceDaoTest" />
+      <option name="METHOD_NAME" value="insert" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -305,11 +306,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UserDaoTest" />
-        <item itemvalue="JUnit.UserDaoTest.findByProperty" />
-        <item itemvalue="JUnit.UserDaoTest.delete" />
-        <item itemvalue="JUnit.UserDaoTest.update" />
-        <item itemvalue="JUnit.UserDaoTest.getById" />
+        <item itemvalue="JUnit.FragranceDaoTest.delete" />
+        <item itemvalue="JUnit.FragranceDaoTest.findByPropertyEqual" />
+        <item itemvalue="JUnit.FragranceDaoTest" />
+        <item itemvalue="JUnit.FragranceDaoTest.getById" />
+        <item itemvalue="JUnit.FragranceDaoTest.insert" />
       </list>
     </recent_temporary>
   </component>
@@ -338,7 +339,7 @@
       <workItem from="1678049052744" duration="1001000" />
       <workItem from="1678128131593" duration="122000" />
       <workItem from="1678132952861" duration="18588000" />
-      <workItem from="1678239739582" duration="24312000" />
+      <workItem from="1678239739582" duration="30804000" />
     </task>
     <servers />
   </component>
