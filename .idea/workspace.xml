@@ -10,6 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="637f9b54-8ac0-4522-8cd3-532ac466107c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/scentdex/persistence/WishlistDaoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/scentdex/persistence/GenericDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scentdex/persistence/GenericDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/scentdex/persistence/UserDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/scentdex/persistence/UserDaoTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -22,8 +25,8 @@
       <list>
         <option value="CSS File" />
         <option value="Jsp File" />
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -107,6 +110,7 @@
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.scentdex.persistence" />
+      <recent name="com.scentdex.entity" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.scentdex.testUtils" />
@@ -116,7 +120,22 @@
   <component name="RunDashboard">
     <option name="openRunningConfigInTab" value="true" />
   </component>
-  <component name="RunManager" selected="JUnit.UserDaoTest.delete">
+  <component name="RunManager" selected="JUnit.UserDaoTest">
+    <configuration name="UserDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="scent-dex" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.scentdex.persistence.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.scentdex.persistence" />
+      <option name="MAIN_CLASS_NAME" value="com.scentdex.persistence.UserDaoTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UserDaoTest.delete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="scent-dex" />
       <extension name="coverage">
@@ -133,7 +152,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserDaoTest.getAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserDaoTest.findByProperty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="scent-dex" />
       <extension name="coverage">
         <pattern>
@@ -143,7 +162,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.scentdex.persistence" />
       <option name="MAIN_CLASS_NAME" value="com.scentdex.persistence.UserDaoTest" />
-      <option name="METHOD_NAME" value="getAll" />
+      <option name="METHOD_NAME" value="findByProperty" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -160,22 +179,6 @@
       <option name="PACKAGE_NAME" value="com.scentdex.persistence" />
       <option name="MAIN_CLASS_NAME" value="com.scentdex.persistence.UserDaoTest" />
       <option name="METHOD_NAME" value="getById" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserDaoTest.insert" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="scent-dex" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.scentdex.persistence.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.scentdex.persistence" />
-      <option name="MAIN_CLASS_NAME" value="com.scentdex.persistence.UserDaoTest" />
-      <option name="METHOD_NAME" value="insert" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -302,11 +305,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UserDaoTest" />
+        <item itemvalue="JUnit.UserDaoTest.findByProperty" />
         <item itemvalue="JUnit.UserDaoTest.delete" />
         <item itemvalue="JUnit.UserDaoTest.update" />
         <item itemvalue="JUnit.UserDaoTest.getById" />
-        <item itemvalue="JUnit.UserDaoTest.insert" />
-        <item itemvalue="JUnit.UserDaoTest.getAll" />
       </list>
     </recent_temporary>
   </component>
@@ -335,7 +338,7 @@
       <workItem from="1678049052744" duration="1001000" />
       <workItem from="1678128131593" duration="122000" />
       <workItem from="1678132952861" duration="18588000" />
-      <workItem from="1678239739582" duration="19927000" />
+      <workItem from="1678239739582" duration="24312000" />
     </task>
     <servers />
   </component>

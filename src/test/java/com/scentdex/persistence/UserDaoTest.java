@@ -91,12 +91,18 @@ class UserDaoTest {
         assertNull(userDao.getById(1));
     }
 
+    /**
+     * Tests finding by single property
+     */
     @Test
     void findByProperty() {
-    }
-
-    @Test
-    void testFindByProperty() {
+        // reset user list
+        users.clear();
+        // get user with property
+        users = userDao.findByPropertyEqual("username", "erickrey");
+        // test
+        assertTrue(users.size() > 0);
+        assertTrue(users.get(0).getUsername().equals("erickrey"));
     }
 
     /**

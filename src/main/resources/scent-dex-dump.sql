@@ -37,7 +37,7 @@ CREATE TABLE `fragrance_notes` (
 --
 
 LOCK TABLES `fragrance_notes` WRITE;
-INSERT INTO `fragrance_notes` (`fragrance_id`, `note_id`) VALUES (1,1),(1,2),(1,3),(1,4),(1,5),(1,6),(1,7),(1,8),(1,9),(1,10),(1,11),(1,12),(1,13),(1,14);
+INSERT INTO `fragrance_notes` (`fragrance_id`, `note_id`) VALUES (1,1),(1,2),(1,3),(1,4),(1,5),(1,6),(1,7),(1,8),(1,9),(1,10),(1,11),(1,12),(1,13),(1,14),(2,15),(2,16),(2,17),(2,18),(2,19),(2,20);
 UNLOCK TABLES;
 
 --
@@ -54,7 +54,7 @@ CREATE TABLE `fragrances` (
   `description` varchar(500) DEFAULT NULL,
   `pricing` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`fragranceId`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -62,7 +62,7 @@ CREATE TABLE `fragrances` (
 --
 
 LOCK TABLES `fragrances` WRITE;
-INSERT INTO `fragrances` (`fragranceId`, `name`, `designer`, `description`, `pricing`) VALUES (1,'Eros Flame','Versace','In a fiery red bottle, Eros Flame is the fragrance of love and passion, deeply masculine and intense. In the words of Donatella Versace, \"The spark of true love is the dream that each of us pursues. True love captures the soul, body and mind, and never lets you go. It takes your breath away because without your beloved, you no longer feel complete. True love consumes everything in an eternal flame of passion.\" ','$107');
+INSERT INTO `fragrances` (`fragranceId`, `name`, `designer`, `description`, `pricing`) VALUES (1,'Eros Flame','Versace','In a fiery red bottle, Eros Flame is the fragrance of love and passion, deeply masculine and intense. In the words of Donatella Versace, \"The spark of true love is the dream that each of us pursues. True love captures the soul, body and mind, and never lets you go. It takes your breath away because without your beloved, you no longer feel complete. True love consumes everything in an eternal flame of passion.\" ','$107'),(2,'Luna Rossa','Prada','Evolved from the pursuit of excellence—dynamic, sportive, and energetic—Luna Rossa by Prada is a scent with a reverence for the natural world and a passion for innovation. The strength and freshness of the elements is evoked by the interpretation of classic notes in novel forms. A wave of aromatic freshness crashes through Luna Rossa, conveying strength and dynamic energy, while its signature is noble and sensual. ','$95');
 UNLOCK TABLES;
 
 --
@@ -76,7 +76,7 @@ CREATE TABLE `notes` (
   `noteId` int NOT NULL AUTO_INCREMENT,
   `name` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`noteId`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -84,7 +84,7 @@ CREATE TABLE `notes` (
 --
 
 LOCK TABLES `notes` WRITE;
-INSERT INTO `notes` (`noteId`, `name`) VALUES (1,'Black pepper'),(2,'Chinotto'),(3,'Mandarin'),(4,'Lemon'),(5,'Rosemary'),(6,'Pepper'),(7,'Geranium'),(8,'Rose'),(9,'Vanilla'),(10,'Tonka bean'),(11,'Texas cedar'),(12,'Sandalwood'),(13,'Patchouli'),(14,'Oakmoss');
+INSERT INTO `notes` (`noteId`, `name`) VALUES (1,'Black pepper'),(2,'Chinotto'),(3,'Mandarin'),(4,'Lemon'),(5,'Rosemary'),(6,'Pepper'),(7,'Geranium'),(8,'Rose'),(9,'Vanilla'),(10,'Tonka bean'),(11,'Texas cedar'),(12,'Sandalwood'),(13,'Patchouli'),(14,'Oakmoss'),(15,'Orange Essence'),(16,'Lavender Absolue'),(17,'Clary Sage'),(18,'Spearmint Nanah'),(19,'Ambroxan'),(20,'Ambrette Absolue');
 UNLOCK TABLES;
 
 --
@@ -133,7 +133,7 @@ CREATE TABLE `users` (
   `username` varchar(20) NOT NULL,
   `wishlist_id` int DEFAULT NULL,
   PRIMARY KEY (`userId`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -141,7 +141,7 @@ CREATE TABLE `users` (
 --
 
 LOCK TABLES `users` WRITE;
-INSERT INTO `users` (`userId`, `createDate`, `email`, `password`, `username`, `wishlist_id`) VALUES (1,'2023-03-06','ereyes3@madisoncollege.edu','hello','erickrey',NULL);
+INSERT INTO `users` (`userId`, `createDate`, `email`, `password`, `username`, `wishlist_id`) VALUES (1,'2023-03-06','ereyes3@madisoncollege.edu','hello','erickrey',NULL),(3,'2023-03-09','vinny123@example.com','marshall35','vinnyvine',NULL);
 UNLOCK TABLES;
 
 --
@@ -181,4 +181,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-03-08 10:23:40
+-- Dump completed on 2023-03-09 21:41:49
