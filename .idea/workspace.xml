@@ -10,13 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="637f9b54-8ac0-4522-8cd3-532ac466107c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scentdex/entity/Fragrance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scentdex/entity/Fragrance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scentdex/entity/Note.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scentdex/entity/Note.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scentdex/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scentdex/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scentdex/entity/Wishlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scentdex/entity/Wishlist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/scent-dex-dump.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/scent-dex-dump.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/scentdex/persistence/FragranceDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/scentdex/persistence/FragranceDaoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j2.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -340,7 +336,7 @@
       <workItem from="1678128131593" duration="122000" />
       <workItem from="1678132952861" duration="18588000" />
       <workItem from="1678239739582" duration="41234000" />
-      <workItem from="1678501907743" duration="7923000" />
+      <workItem from="1678501907743" duration="8411000" />
     </task>
     <servers />
   </component>
