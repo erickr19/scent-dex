@@ -10,9 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="637f9b54-8ac0-4522-8cd3-532ac466107c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/scentdex/persistence/GenericDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scentdex/persistence/GenericDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j2.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/log4j2.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/log4j2.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +117,7 @@
   <component name="RunDashboard">
     <option name="openRunningConfigInTab" value="true" />
   </component>
-  <component name="RunManager" selected="JUnit.NoteDaoTest.delete">
+  <component name="RunManager" selected="JUnit.FragranceDaoTest.insert">
     <configuration name="FragranceDaoTest.delete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="scent-dex" />
       <extension name="coverage">
@@ -128,6 +129,22 @@
       <option name="PACKAGE_NAME" value="com.scentdex.persistence" />
       <option name="MAIN_CLASS_NAME" value="com.scentdex.persistence.FragranceDaoTest" />
       <option name="METHOD_NAME" value="delete" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FragranceDaoTest.insert" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="scent-dex" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.scentdex.persistence.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.scentdex.persistence" />
+      <option name="MAIN_CLASS_NAME" value="com.scentdex.persistence.FragranceDaoTest" />
+      <option name="METHOD_NAME" value="insert" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -160,22 +177,6 @@
       <option name="PACKAGE_NAME" value="com.scentdex.persistence" />
       <option name="MAIN_CLASS_NAME" value="com.scentdex.persistence.NoteDaoTest" />
       <option name="METHOD_NAME" value="update" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ReviewDaoTest.findByPropertyEqual" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="scent-dex" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.scentdex.persistence.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.scentdex.persistence" />
-      <option name="MAIN_CLASS_NAME" value="com.scentdex.persistence.ReviewDaoTest" />
-      <option name="METHOD_NAME" value="findByPropertyEqual" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -302,11 +303,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FragranceDaoTest.insert" />
         <item itemvalue="JUnit.NoteDaoTest.delete" />
         <item itemvalue="JUnit.NoteDaoTest.update" />
         <item itemvalue="JUnit.FragranceDaoTest.delete" />
         <item itemvalue="JUnit.WishlistDaoTest.delete" />
-        <item itemvalue="JUnit.ReviewDaoTest.findByPropertyEqual" />
       </list>
     </recent_temporary>
   </component>
@@ -336,7 +337,7 @@
       <workItem from="1678128131593" duration="122000" />
       <workItem from="1678132952861" duration="18588000" />
       <workItem from="1678239739582" duration="41234000" />
-      <workItem from="1678501907743" duration="8411000" />
+      <workItem from="1678501907743" duration="8833000" />
     </task>
     <servers />
   </component>
