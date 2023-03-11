@@ -1,5 +1,0 @@
-com/scentdex/entity/Fragrance.class
-com/scentdex/persistence/SessionFactoryProvider.class
-com/scentdex/controller/Homepage.class
-com/scentdex/controller/Learn.class
-com/scentdex/persistence/FragranceDao.class
