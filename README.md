@@ -21,3 +21,5 @@ https://github.com/erickr19/scent-dex/blob/main/design-files/screen-designs.md
 https://github.com/erickr19/scent-dex/blob/main/design-files/user-stories.md
 ### Database ERD
 https://github.com/erickr19/scent-dex/blob/main/design-files/db-erd.md
+### Time Log
+https://github.com/erickr19/scent-dex/blob/main/timeLog.md
