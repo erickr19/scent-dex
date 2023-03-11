@@ -28,7 +28,7 @@ CREATE TABLE `fragrance_notes` (
   PRIMARY KEY (`fragrance_id`,`note_id`),
   KEY `note` (`note_id`),
   CONSTRAINT `fragrance_notes_ibfk_1` FOREIGN KEY (`fragrance_id`) REFERENCES `fragrances` (`fragranceId`),
-  CONSTRAINT `fragrance_notes_ibfk_2` FOREIGN KEY (`note_id`) REFERENCES `notes` (`noteId`)
+  CONSTRAINT `fragrance_notes_ibfk_2` FOREIGN KEY (`note_id`) REFERENCES `notes` (`noteId`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -160,7 +160,7 @@ CREATE TABLE `wishlist` (
   KEY `user` (`user_id`),
   KEY `fragrance` (`fragrance_id`),
   CONSTRAINT `wishlist_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`userId`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `wishlist_ibfk_2` FOREIGN KEY (`fragrance_id`) REFERENCES `fragrances` (`fragranceId`) ON DELETE RESTRICT ON UPDATE CASCADE
+  CONSTRAINT `wishlist_ibfk_2` FOREIGN KEY (`fragrance_id`) REFERENCES `fragrances` (`fragranceId`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -181,4 +181,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-03-10 16:06:18
+-- Dump completed on 2023-03-10 22:44:22

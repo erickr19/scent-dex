@@ -31,7 +31,7 @@ public class User {
     private String username;
 
     // wishlist
-    @OneToOne(mappedBy = "user", cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
+    @OneToOne(mappedBy = "user")
     @PrimaryKeyJoinColumn
     private Wishlist wishlist;
 

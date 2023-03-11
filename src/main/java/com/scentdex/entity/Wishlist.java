@@ -24,7 +24,7 @@ public class Wishlist {
     private Fragrance fragrance;
 
     // user
-    @OneToOne(orphanRemoval = true)
+    @OneToOne
     @MapsId
     @JoinColumn(name = "user_id")
     private User user;

@@ -45,11 +45,9 @@ public class Fragrance {
 
     // fragrance_notes
     @ManyToMany(cascade = {CascadeType.DETACH})
-    @JoinTable(
-            name = "fragrance_notes",
-            joinColumns = { @JoinColumn(name = "fragrance_id") },
-            inverseJoinColumns = { @JoinColumn(name = "note_id") }
-    )
+    @JoinTable(name = "fragrance_notes",
+            joinColumns = @JoinColumn(name = "fragrance_id"),
+            inverseJoinColumns = @JoinColumn(name = "note_id"))
     private Set<Note> notes = new HashSet<>();
     // constructors
 

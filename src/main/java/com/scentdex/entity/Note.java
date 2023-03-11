@@ -24,7 +24,7 @@ public class Note {
     private String name;
 
     // fragrance_notes
-    @ManyToMany(mappedBy = "notes")
+    @ManyToMany(mappedBy = "notes", cascade = CascadeType.DETACH)
     private Set<Fragrance> fragrances = new HashSet<>();
 
     // constructors
