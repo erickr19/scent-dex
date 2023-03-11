@@ -10,12 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="637f9b54-8ac0-4522-8cd3-532ac466107c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/scentdex/persistence/NoteDaoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/scentdex/persistence/ReviewDaoTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/scent-dex-dump.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/scent-dex-dump.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/scentdex/persistence/FragranceDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/scentdex/persistence/FragranceDaoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/scentdex/persistence/WishlistDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/scentdex/persistence/WishlistDaoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/hibernate.cfg.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,8 +118,8 @@
   <component name="RunDashboard">
     <option name="openRunningConfigInTab" value="true" />
   </component>
-  <component name="RunManager" selected="JUnit.NoteDaoTest.findByPropertyEqual">
-    <configuration name="NoteDaoTest.delete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ReviewDaoTest.findByPropertyEqual">
+    <configuration name="ReviewDaoTest.delete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="scent-dex" />
       <extension name="coverage">
         <pattern>
@@ -132,14 +128,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.scentdex.persistence" />
-      <option name="MAIN_CLASS_NAME" value="com.scentdex.persistence.NoteDaoTest" />
+      <option name="MAIN_CLASS_NAME" value="com.scentdex.persistence.ReviewDaoTest" />
       <option name="METHOD_NAME" value="delete" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NoteDaoTest.findByPropertyEqual" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ReviewDaoTest.findByPropertyEqual" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="scent-dex" />
       <extension name="coverage">
         <pattern>
@@ -148,14 +144,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.scentdex.persistence" />
-      <option name="MAIN_CLASS_NAME" value="com.scentdex.persistence.NoteDaoTest" />
+      <option name="MAIN_CLASS_NAME" value="com.scentdex.persistence.ReviewDaoTest" />
       <option name="METHOD_NAME" value="findByPropertyEqual" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NoteDaoTest.getAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ReviewDaoTest.getAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="scent-dex" />
       <extension name="coverage">
         <pattern>
@@ -164,14 +160,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.scentdex.persistence" />
-      <option name="MAIN_CLASS_NAME" value="com.scentdex.persistence.NoteDaoTest" />
+      <option name="MAIN_CLASS_NAME" value="com.scentdex.persistence.ReviewDaoTest" />
       <option name="METHOD_NAME" value="getAll" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NoteDaoTest.getById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ReviewDaoTest.getById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="scent-dex" />
       <extension name="coverage">
         <pattern>
@@ -180,14 +176,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.scentdex.persistence" />
-      <option name="MAIN_CLASS_NAME" value="com.scentdex.persistence.NoteDaoTest" />
+      <option name="MAIN_CLASS_NAME" value="com.scentdex.persistence.ReviewDaoTest" />
       <option name="METHOD_NAME" value="getById" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NoteDaoTest.update" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ReviewDaoTest.update" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="scent-dex" />
       <extension name="coverage">
         <pattern>
@@ -196,7 +192,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.scentdex.persistence" />
-      <option name="MAIN_CLASS_NAME" value="com.scentdex.persistence.NoteDaoTest" />
+      <option name="MAIN_CLASS_NAME" value="com.scentdex.persistence.ReviewDaoTest" />
       <option name="METHOD_NAME" value="update" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -308,11 +304,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.NoteDaoTest.findByPropertyEqual" />
-        <item itemvalue="JUnit.NoteDaoTest.getAll" />
-        <item itemvalue="JUnit.NoteDaoTest.delete" />
-        <item itemvalue="JUnit.NoteDaoTest.update" />
-        <item itemvalue="JUnit.NoteDaoTest.getById" />
+        <item itemvalue="JUnit.ReviewDaoTest.findByPropertyEqual" />
+        <item itemvalue="JUnit.ReviewDaoTest.getAll" />
+        <item itemvalue="JUnit.ReviewDaoTest.delete" />
+        <item itemvalue="JUnit.ReviewDaoTest.update" />
+        <item itemvalue="JUnit.ReviewDaoTest.getById" />
       </list>
     </recent_temporary>
   </component>
@@ -342,7 +338,7 @@
       <workItem from="1678128131593" duration="122000" />
       <workItem from="1678132952861" duration="18588000" />
       <workItem from="1678239739582" duration="41234000" />
-      <workItem from="1678501907743" duration="1011000" />
+      <workItem from="1678501907743" duration="3366000" />
     </task>
     <servers />
   </component>
