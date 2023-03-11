@@ -6,7 +6,7 @@ Scent Dex aims to guide users towards their next fragrance by providing a minima
 By making steady progress until the end of the semester, my hope is to provide a fresh experience for people looking to get into the world of fragrances.
 
 ## Technologies/Techniques
-Database: MySQL 8.0.31-arm64<br>
+Database: MySQL 8.0.32-arm64<br>
 ORM Framework: Hibernate 5<br>
 Dependency management: Maven<br>
 CSS: Bootstrap<br>
