@@ -29,6 +29,8 @@ public class Learn extends HttpServlet {
         throws ServletException, IOException {
         // set url
         String url = "/learn.jsp";
+        // set page title
+        request.setAttribute("pageTitle", "Learn more about scents!");
         // get dispatcher
         RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher(url);
         // forward

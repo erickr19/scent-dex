@@ -6,28 +6,29 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 
 /**
- * Homepage servlet class.
- * Forwards to the homepage
+ * Explore servlet class.
+ * Forwards to the Explore page.
+ * Lists all fragrances on a table.
  * @author ereyes3
  */
 @WebServlet(
-        name = "homepage",
-        urlPatterns = { "/homepage" }
+        name = "Explore",
+        urlPatterns = {" /learn "}
 )
-public class Homepage extends HttpServlet {
+public class Explore extends HttpServlet {
     /**
-     * doGet method
-     * Called when user visits the web app.
-     * Forwards user to index.jsp
+     * doGet
+     * Called whenever user visits Explore.
+     * Forwards to explore.jsp
      * @exception ServletException if there is a servlet failure
-     * @exception IOException if there is an IO error.
+     * @exception IOException if there is an IO error
      */
     public void doGet(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException {
         // set url
-        String url = "/index.jsp";
+        String url = "/learn.jsp";
         // set page title
-        request.setAttribute("pageTitle", "ScentDex Homepage");
+        request.setAttribute("pageTitle", "Find your next fragrance");
         // get dispatcher
         RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher(url);
         // forward

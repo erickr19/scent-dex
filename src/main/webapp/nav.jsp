@@ -8,7 +8,7 @@
         <div>
             <ul class="nav fs-5 text-white flex-nowrap">
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#">explore</a>
+                    <a class="nav-link text-white" href="${pageContext.request.contextPath}/explore.jsp">explore</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-white" href="${pageContext.request.contextPath}/learn">learn</a>
