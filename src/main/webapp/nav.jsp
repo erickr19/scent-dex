@@ -14,7 +14,7 @@
                     <a class="nav-link text-white" href="${pageContext.request.contextPath}/learn">learn</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="${pageContext.request.contextPath}/logIn">login</a>
+                    <a class="nav-link text-white" href="${pageContext.request.contextPath}/testUser.jsp">login</a>
                 </li>
             </ul>
         </div>

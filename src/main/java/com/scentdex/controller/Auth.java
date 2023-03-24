@@ -89,8 +89,8 @@ public class Auth extends HttpServlet implements PropertiesLoader {
                 TokenResponse tokenResponse = getToken(authRequest);
                 userName = validate(tokenResponse);
                 req.setAttribute("userName", userName);
-                // set url to homepage if properly authenticated
-                url = "homepage";
+                // set url to testUser if properly authenticated
+                url = "testUser.jsp";
             } catch (IOException e) {
                 req.setAttribute("error", e.getMessage());
                 logger.error("Error getting or validating the token: " + e.getMessage(), e);
