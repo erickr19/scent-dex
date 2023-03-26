@@ -18,6 +18,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.File;
 import java.io.IOException;
 import java.math.BigInteger;
@@ -89,6 +90,10 @@ public class Auth extends HttpServlet implements PropertiesLoader {
                 TokenResponse tokenResponse = getToken(authRequest);
                 userName = validate(tokenResponse);
                 req.setAttribute("userName", userName);
+                // create new session attribute for user persistence
+                HttpSession session = req.getSession();
+                // add user to session
+                session.setAttribute("user", userName);
                 // set url to testUser if properly authenticated
                 url = "testUser.jsp";
             } catch (IOException e) {

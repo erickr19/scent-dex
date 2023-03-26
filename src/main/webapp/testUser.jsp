@@ -17,12 +17,12 @@
     <div class="container mt-4 text-white">
         <%-- test if userName is set --%>
         <c:choose>
-            <c:when test="${empty userName}">
+            <c:when test="${empty user}">
                 <p>Not currently signed in...</p>
                 <a href = "logIn">Log in</a>
             </c:when>
             <c:otherwise>
-                <h3>Hello ${userName}!</h3>
+                <h3>Hello ${user}!</h3>
             </c:otherwise>
         </c:choose>
     </div>
