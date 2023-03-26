@@ -39,3 +39,7 @@ I implemented Log4J2 properly. I was able to refresh my git repo to implement ch
 ### Key learning points
 Week 8 was one of the more challenging ones. Especially when coding entity relationships. There have been many bugs that ranged from the MySQL server being corrupted to constraint violations. I would say the ratio from code to debugging was 1:4. It was very easy to want to give up on a bug, and sometimes it did burn me out.
 My biggest takeaway this week to be patient especially when debugging. Taking breaks when needed is important as well to avoid major burnout. In the future, I will know that implementing an ORM framework will probably need more time and effort.
+
+## Week 9
+I added AWS Cognito Authentication to my web app. Additionally, my project is living on Elastic Beanstalk. I made changes to the frontend so that the displays change whenever a user is logged in or not.
+I would say that I am caught up and am in a better spot than where I was a couple of weeks ago.
