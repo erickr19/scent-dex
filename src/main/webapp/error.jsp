@@ -11,7 +11,7 @@
 <%-- main container --%>
 <div class="container">
     <%-- nav --%>
-    <%@include file="nav.jsp"%>
+    <%@include file="new-nav.jsp"%>
     <%-- content --%>
     <div class="container mt-4 text-white">
         <%-- Header --%>
