@@ -1,5 +1,6 @@
 package com.scentdex.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -19,6 +20,7 @@ public class Wishlist {
     private int wishlistId;
 
     // fragrance
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "fragrance_id")
     private Fragrance fragrance;

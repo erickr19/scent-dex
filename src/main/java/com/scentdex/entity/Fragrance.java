@@ -1,5 +1,6 @@
 package com.scentdex.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -36,6 +37,7 @@ public class Fragrance {
     private String pricing;
 
     // reviews
+    @JsonIgnore
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "fragrance")
     private Set<Review> review;
 

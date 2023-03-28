@@ -4,8 +4,8 @@
         "https://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
     <session-factory>
-        <property name="connection.url">jdbc:mysql://awseb-e-us3n8yevpg-stack-awsebrdsdatabase-qsj0zptv05mv.cpuvrdsakafg.us-east-2.rds.amazonaws.com:3306/ScentDex</property>
-<!--Test        <property name="connection.url">jdbc:mysql://localhost:3306/ScentDexTest</property>-->
+<!--        <property name="connection.url">jdbc:mysql://awseb-e-us3n8yevpg-stack-awsebrdsdatabase-qsj0zptv05mv.cpuvrdsakafg.us-east-2.rds.amazonaws.com:3306/ScentDex</property>-->
+        <property name="connection.url">jdbc:mysql://localhost:3306/ScentDexTest</property>
         <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
 
         <property name="connection.username">root</property>

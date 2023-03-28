@@ -1,5 +1,6 @@
 package com.scentdex.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -31,11 +32,13 @@ public class User {
     private String username;
 
     // wishlist
+    @JsonIgnore
     @OneToOne(mappedBy = "user")
     @PrimaryKeyJoinColumn
     private Wishlist wishlist;
 
     // review
+    @JsonIgnore
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "user")
     private Set<Review> review;
 
